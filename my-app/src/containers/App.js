@@ -51,6 +51,14 @@ class App extends Component {
         this.setState({ authenticated: true });
     };
 
+    toggleCockpitHandler = () => {
+        this.setState((prevState, props) => {
+            return {
+                showCockpit: !prevState.showCockpit
+            };
+        });
+    };
+
     render() {
 
         let persons = null;
@@ -65,12 +73,11 @@ class App extends Component {
 
         return (
             <div>
-                <button onClick={() => this.sestState({ showCockpit: !this.state.showCockpit })}>{this.state.showCockpit ? "Hide" : "Show"} Cockpit</button>
+                <button onClick={this.toggleCockpitHandler}>{this.state.showCockpit ? "Hide" : "Show"} Cockpit</button>
                 <AuthContext.Provider value={{ authenticated: this.state.authenticated, loginClicked: this.loginHandler}}>
                     <p>authenticated: {this.state.authenticated ? "true" : "false"}</p>
                     {this.state.showCockpit ? (
                         <Cockpit
-                            // title={this.props.appTitle}
                             title="Person Manager"
                             showPersons={this.state.showPersons}
                             persons={this.state.persons}

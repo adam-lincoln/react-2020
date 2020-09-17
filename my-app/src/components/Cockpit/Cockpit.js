@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import styles from './Cockpit.module.scss';
 import Clicker from '../Clicker/Clicker';
 import AuthContext from '../../contexts/authContext';
 
 const Cockpit = (props) => {
 
+    const authContext = useContext(AuthContext);
     const toggleButtonRef = useRef(null);
 
     useEffect(() => {
@@ -28,16 +29,15 @@ const Cockpit = (props) => {
         buttonClasses.push(styles.Red);
     }
 
+    console.log('[Cockpit.js] useContext authContext=', authContext);
+
     return <div className={styles.Cockpit}>
         <Clicker />
         <h1>{props.title}</h1>
         <p className={assignedClasses.join(' ')}>This is working!</p>
         <p>changedCounter: {props.changedCounter}</p>
         <button ref={toggleButtonRef} className={buttonClasses.join(' ')} onClick={props.clicked}>Toggle Persons</button>
-
-        <AuthContext.Consumer>
-            {(context) => <button onClick={context.loginClicked}>Login</button>}
-        </AuthContext.Consumer>
+        <button onClick={authContext.loginClicked}>Login</button>
     </div>
 }
 
