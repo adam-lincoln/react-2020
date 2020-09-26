@@ -1,4 +1,6 @@
 import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 import styles from './App.module.scss';
 import withClass from './hoc/withClass';
 
@@ -57,7 +59,7 @@ const generateBuildItem = (driverCode, vehicleCode, tyreCode, gliderCode) => {
   }
 
   Object.keys(driverModel)
-    .filter(key => key !== 'image_name')
+    .filter(key => DO_NOT_TOUCH_FIELDS.indexOf(key) === -1)
     .forEach(key =>
       summaryModel[key] = models.map(model => model[key]).reduce((a, b) => a + b));
 
@@ -80,12 +82,15 @@ const buildList = generateBuildList();
 
 
 const App = () =>
-  <Layout
-    buildList={buildList}
-    driverList={driverList}
-    vehicleList={vehicleList}
-    tyreList={tyreList}
-    gliderList={gliderList}
-  />
+  <React.Fragment>
+    <CssBaseline />
+    <Layout
+      buildList={buildList}
+      driverList={driverList}
+      vehicleList={vehicleList}
+      tyreList={tyreList}
+      gliderList={gliderList}
+    />
+  </React.Fragment>
 
 export default withClass(App, styles.App);

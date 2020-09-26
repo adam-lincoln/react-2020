@@ -14,6 +14,10 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Zoom from '@material-ui/core/Zoom';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,13 +26,18 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: 0,
     margin: 0,
-    backgroundColor: '#eee',
+    // backgroundColor: '#eee',
   },
   menuButton: {
     marginRight: theme.spacing(1),
   },
   title: {
     flexGrow: 1,
+  },
+  scrollToTopFab: {
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
   },
 }));
 
@@ -62,6 +71,34 @@ const a11yProps = (index) => {
 }
 
 
+
+const ScrollTop = (props) => {
+
+  const { children, window } = props;
+  const classes = useStyles();
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  return (
+    <Zoom in={trigger}>
+      <div onClick={handleClick} role="presentation" className={classes.root}>
+        {children}
+      </div>
+    </Zoom>
+  );
+}
+
+
 const Layout = (props) => {
 
   const classes = useStyles();
@@ -84,6 +121,7 @@ const Layout = (props) => {
           </Typography>
         </Toolbar>
         <Tabs
+          // id="back-to-top-anchor"
           value={value}
           onChange={handleChange}
           variant="scrollable"
@@ -96,6 +134,8 @@ const Layout = (props) => {
           <Tab label="GLIDERS" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
+
+      {/* <Toolbar id="back-to-top-anchor" /> */}
 
       <div className={classes.offset} />
       <div className={classes.offset} />
@@ -121,6 +161,12 @@ const Layout = (props) => {
           <ItemListCard title="Gliders" items={props.gliderList} />
         </TabPanel>
       </SwipeableViews>
+
+      {/* <ScrollTop className={classes.scrollToTopFab}>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop> */}
 
     </div>
   );

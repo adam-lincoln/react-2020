@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { amber, blue, blueGrey, brown, common, cyan, deepOrange, deepPurple, green, grey, indigo, lightBlue, lightGreen, lime, orange, pink, purple, red, teal, yellow,  } from '@material-ui/core/colors';
+
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -32,6 +34,10 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import Avatar from '@material-ui/core/Avatar';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import Chip from '@material-ui/core/Chip';
+import SpeedIcon from '@material-ui/icons/Speed';
 
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
@@ -72,6 +78,15 @@ const useStyles = makeStyles((theme) => ({
   },
   resultsText: {
     margin: theme.spacing(1),
+  },
+  rounded: {
+    color: '#fff',
+    backgroundColor: orange[200],
+  },
+  avatar: {
+    width: 100,
+    backgroundSize: 'contain',
+    // backgroundColor: orange[100],
   },
 }));
 
@@ -189,11 +204,7 @@ const ItemListCard = (props) => {
     return newItem;
   });
 
-  const originalItems = [...items];
-  const sortedOriginalItems = sortItems([...originalItems], ['+name']);
 
-  const [nameFilter, setNameFilter] = useState([]);
-  const [filteredItems, setFilteredItems] = useState([...items]);
   const SORTS = [
     { code: 'name', name: 'Name', asc: true},
     { code: 'm_speed_land', name: 'Speed', asc: false},
@@ -202,6 +213,13 @@ const ItemListCard = (props) => {
     { code: 'm_handling_land', name: 'Handling', asc: false},
     { code: 'm_traction_offroad', name: 'Grip', asc: false},
   ];
+
+
+  const originalItems = [...items];
+  const sortedOriginalItems = sortItems([...originalItems], SORTS[0]);
+
+  const [nameFilter, setNameFilter] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([...items]);
   const [currentSort, setCurrentSort] = useState(SORTS[0]);
 
   useEffect(() => {
@@ -242,7 +260,7 @@ const ItemListCard = (props) => {
                 }}
                 // defaultValue={[]}
                 renderInput={(params) => (
-                  <TextField {...params} variant="standard" label="Drivers" />
+                  <TextField {...params} variant="standard" label={props.title} />
                 )}
                 renderOption={(option, { selected }) => (
                   <React.Fragment>
@@ -272,12 +290,10 @@ const ItemListCard = (props) => {
                 onChange={(event) => {
                   const newSortCode = event.target.value;
                   if (newSortCode === currentSort.code) {
-                    console.log('same');
                     const newSort = {...currentSort};
                     newSort.asc = !newSort.asc;
                     setCurrentSort(newSort);
                   } else {
-                    console.log('new');
                     const newSort = SORTS.filter(sort => sort.code === newSortCode)[0];
                     setCurrentSort(newSort);
                   }
@@ -290,49 +306,7 @@ const ItemListCard = (props) => {
         </CardContent>
       </Card>
 
-      {/* TODO: Collapsible filters with filter summary / auto collapse on scroll */}
-      {/* <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography><FilterListIcon /> Filter</Typography>
-        </AccordionSummary>
-        <AccordionDetails style={{ display: 'flex', flexDirection: 'column' }}>
-          <TextField id="nameFilter" label="Name" value={nameFilter} onChange={(event) => setNameFilter(event.target.value)} />
-          <Button onClick={() => setNameFilter('')}>Clear</Button>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography><SortIcon /> Sort ({sortDirection}|{sortProperty})</Typography>
-        </AccordionSummary>
-        <AccordionDetails style={{ display: 'flex', flexDirection: 'column' }}>
-          <FormControl className={classes.formControl}>
-            <InputLabel id="idSortProperty">Property</InputLabel>
-            <Select labelId="idSortProperty" value={sortProperty} onChange={(event) => setSortProperty(event.target.value)}>
-              {sortProperties.map(property => <MenuItem key={property} value={property}>{property}</MenuItem>)}
-            </Select>
-          </FormControl>
-          <Button onClick={() => { setSortProperty('name'); setSortDirection('+'); }}>Reset</Button>
-        </AccordionDetails>
-      </Accordion> */}
-
-      {/* <div>
-        <p>Sort</p>
-        <FormControl className={classes.formControl}>
-          <InputLabel id="idSortProperty">Property</InputLabel>
-          <Select labelId="idSortProperty" value={sortProperty} onChange={(event) => setSortProperty(event.target.value)}>
-            {sortProperties.map(property => <MenuItem key={property} value={property}>{property}</MenuItem>)}
-          </Select>
-        </FormControl>
-        <FormControl className={classes.formControl}>
-          <InputLabel id="idSortDirection">Direction</InputLabel>
-          <Select labelId="idSortDirection" value={sortDirection} onChange={(event) => setSortDirection(event.target.value)}>
-            {[ '+', '-' ].map(direction => <MenuItem key={direction} value={direction}>{direction}</MenuItem>)}
-          </Select>
-        </FormControl>
-      </div> */}
-
-      <Typography variant="body2" className={classes.resultsText}>{filteredItems.length} driver(s)</Typography>
+      <Typography variant="body2" className={classes.resultsText}>{filteredItems.length} {props.title.toLowerCase()}(s)</Typography>
 
       <Box>
         {filteredItems.map(item => {
@@ -340,17 +314,19 @@ const ItemListCard = (props) => {
             <Box my={1} key={item.code} >
               <Card className={classes.root}>
                 <CardMedia
-                  className={classes.cover}
+                  className={classes.avatar}
                   title={item.name}
                   image={item.image_name}
                 />
                 <div className={classes.details}>
                   <CardContent>
-                    <Typography variant="h4">
+                    <Typography variant="h6">
                       {item.name}
                     </Typography>
+                    {/* <Avatar variant="rounded" className={classes.rounded} src={item.image_name}>
+                      <AssignmentIcon />
+                    </Avatar> */}
                     <div>
-
                       {Object.keys(item.stats).map(key => {
                         const stat = item.stats[key];
                         return (
@@ -368,6 +344,47 @@ const ItemListCard = (props) => {
                   </CardActions> */}
                 </div>
               </Card>
+
+              {/* <Card style={{
+                marginTop: '8px',
+                padding: '4px',
+                display: 'flex',
+                flexFlow: 'column',
+                // alignItems: 'center',
+              }}>
+                <div style={{
+                  marginTop: '8px',
+                  padding: '4px',
+                  display: 'flex',
+                  flexFlow: 'row',
+                  alignItems: 'center',
+                }}>
+                  <Typography variant="h6"style={{
+                    flexGrow: '1',
+                  }}>
+                    {item.name}
+                  </Typography>
+                  <Avatar variant="rounded" src={item.image_name} style={{
+
+                  }}>
+                  </Avatar>
+                </div>
+                <div style={{
+                  marginTop: '8px',
+                  padding: '4px',
+                  display: 'flex',
+                  flexFlow: 'row',
+                  // alignItems: 'center',
+                  flexWrap: 'wrap',
+                }}>
+                  <Chip icon={<SpeedIcon />} label="4" />
+                  <Chip label="Acceleration: 4" />
+                  <Chip label="Weight: 4" />
+                  <Chip label="Handling: 4" />
+                  <Chip label="Grip: 4" />
+                </div>
+              </Card> */}
+
             </Box>
           );
         })}
