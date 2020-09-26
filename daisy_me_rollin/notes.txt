@@ -2,3 +2,31 @@ Mario Kart 8 Deluxe builder
 https://www.mariowiki.com/Mario_Kart_8_Deluxe
 
 https://www.mk8dxbuilder.com/
+
+
+<h1>References</h1>
+<ul>
+  <li><a href="https://gamesites.nintendo.com.au/mario-kart-8-deluxe/">Nintendo | Mario Kart 8 Deluxe </a></li>
+  <li><a href="https://www.mariowiki.com/Mario_Kart_8_Deluxe">MarioWiki | Mario Kart 8 Deluxe</a></li>
+  <li><a href="https://www.mariowiki.com/Mario_Kart_8_Deluxe_in-game_statistics">MarioWiki | Mario Kart 8 Deluxe | In-game statistics</a></li>
+  <li><a href="https://www.mk8dxbuilder.com/">Mario Kart 8 Deluxe Builder 1.1</a></li>
+</ul>
+
+
+const TABLE_HEADERS = [
+  "name",
+  "weight",
+  "acceleration",
+  "traction_onroad",
+  "traction_offroad",
+  "turbo_mini",
+  "speed_land",
+  "speed_water",
+  "speed_antigravity",
+  "speed_air",
+  "handling_land",
+  "handling_water",
+  "handling_antigravity",
+  "handling_air"
+];
+

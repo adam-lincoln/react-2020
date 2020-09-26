@@ -1,67 +1,129 @@
-import React from 'react';
-import ItemList from '../../components/ItemList/ItemList';
-import ItemTable from '../../components/ItemTable/ItemTable';
-import Builder from '../Builder/Builder';
+import React, { useState } from 'react';
+import SwipeableViews from 'react-swipeable-views';
 
-const TABLE_HEADERS = [
-  "name",
-  "weight",
-  "acceleration",
-  "traction_onroad",
-  "traction_offroad",
-  "turbo_mini",
-  "speed_land",
-  "speed_water",
-  "speed_antigravity",
-  "speed_air",
-  "handling_land",
-  "handling_water",
-  "handling_antigravity",
-  "handling_air"
-];
+import ItemListCard from '../../components/ItemListCard/ItemListCard';
+import { makeStyles, useTheme  } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
-const Layout = (props) =>
-  <>
 
-    <header>
-      <h1>Daisy Me Rollin'</h1>
-      <span style={{ fontStyle: 'italic' }}>A Mario Kart 8 Deluxe builder</span>
-    </header>
+const useStyles = makeStyles((theme) => ({
+  offset: theme.mixins.toolbar,
+  root: {
+    flexGrow: 1,
+    padding: 0,
+    margin: 0,
+    backgroundColor: '#eee',
+  },
+  menuButton: {
+    marginRight: theme.spacing(1),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
 
-    <main>
 
-      <Builder
-        driverList={props.driverList}
-        vehicleList={props.vehicleList}
-        tyreList={props.tyreList}
-        gliderList={props.gliderList}
-        />
+const TabPanel = (props) => {
+  const { children, value, index, ...other } = props;
 
-      <h1>Data Tables</h1>
-      <ItemTable title="Driver Table" tableHeaders={TABLE_HEADERS} itemList={props.driverList} />
-      <ItemTable title="Vehicle Table" tableHeaders={TABLE_HEADERS} itemList={props.vehicleList} />
-      <ItemTable title="Tyre Table" tableHeaders={TABLE_HEADERS} itemList={props.tyreList} />
-      <ItemTable title="Glider Table" tableHeaders={TABLE_HEADERS} itemList={props.gliderList} />
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={1}>
+          {children}
+        </Box>
+      )}
+    </div>
+  );
+}
 
-      <h1>Data Lists</h1>
-      <ItemList title="Driver List" itemList={props.driverList} />
-      <ItemList title="Vehicle List" itemList={props.vehicleList} />
-      <ItemList title="Tyre List" itemList={props.tyreList} />
-      <ItemList title="Glider List" itemList={props.gliderList} />
 
-      <h1>References</h1>
-      <ul>
-        <li><a href="https://gamesites.nintendo.com.au/mario-kart-8-deluxe/">Nintendo | Mario Kart 8 Deluxe </a></li>
-        <li><a href="https://www.mariowiki.com/Mario_Kart_8_Deluxe">MarioWiki | Mario Kart 8 Deluxe</a></li>
-        <li><a href="https://www.mariowiki.com/Mario_Kart_8_Deluxe_in-game_statistics">MarioWiki | Mario Kart 8 Deluxe | In-game statistics</a></li>
-        <li><a href="https://www.mk8dxbuilder.com/">Mario Kart 8 Deluxe Builder 1.1</a></li>
-      </ul>
+const a11yProps = (index) => {
+  return {
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
+  };
+}
 
-    </main>
 
-    <footer>
-    </footer>
+const Layout = (props) => {
 
-  </>
+  const classes = useStyles();
+  const theme = useTheme();
+
+  const [value, setValue] = useState(1);
+
+  const handleChange = (event, newValue) => setValue(newValue);
+  const handleChangeIndex = (index) => setValue(index);
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="fixed">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Daisy me rollin'
+          </Typography>
+        </Toolbar>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="on"
+        >
+          <Tab label="BUILDS" {...a11yProps(0)} />
+          <Tab label="DRIVERS" {...a11yProps(1)} />
+          <Tab label="VEHICLES" {...a11yProps(2)} />
+          <Tab label="TYRES" {...a11yProps(3)} />
+          <Tab label="GLIDERS" {...a11yProps(4)} />
+        </Tabs>
+      </AppBar>
+
+      <div className={classes.offset} />
+      <div className={classes.offset} />
+
+      <SwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
+        <TabPanel value={value} index={0} dir={theme.direction}>
+          <ItemListCard title="Builds" items={props.buildList.map(build => build.summary)} />
+        </TabPanel>
+        <TabPanel value={value} index={1} dir={theme.direction}>
+          <ItemListCard title="Drivers" items={props.driverList} />
+        </TabPanel>
+        <TabPanel value={value} index={2} dir={theme.direction}>
+          <ItemListCard title="Vehicles" items={props.vehicleList} />
+        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}>
+          <ItemListCard title="Tyres" items={props.tyreList} />
+        </TabPanel>
+        <TabPanel value={value} index={4} dir={theme.direction}>
+          <ItemListCard title="Gliders" items={props.gliderList} />
+        </TabPanel>
+      </SwipeableViews>
+
+    </div>
+  );
+}
 
 export default Layout;

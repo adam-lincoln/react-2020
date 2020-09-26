@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -10,10 +10,32 @@ import CardMedia from '@material-ui/core/CardMedia';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Icon from '@material-ui/core/Icon';
+import FilterListIcon from '@material-ui/icons/FilterList';
+import SortIcon from '@material-ui/icons/Sort';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import Paper from '@material-ui/core/Paper';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Grid from '@material-ui/core/Grid';
+import Checkbox from '@material-ui/core/Checkbox';
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
+
+
+const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,13 +60,76 @@ const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+  slimCard: {
+    padding: theme.spacing(1),
+    "&:last-child": {
+      paddingBottom: theme.spacing(1),
+    }
+  },
+  resultsText: {
+    margin: theme.spacing(1),
+  },
 }));
+
+
+const filterItems = (items, filters) => {
+  const applyFilters = filters.length !== 0;
+  return !applyFilters
+    ? items
+    : items.filter(item => {
+        const results = filters.map(filter => {
+          return filter.code
+            ? item.code === filter.code
+            : item.name.toLowerCase().indexOf(filter.toLowerCase()) >= 0;
+        });
+        const show = results.reduce((a, b) => a || b);
+        return show;
+      });
+}
+
+
+const sortItems = (items, sort) => {
+  const sorts = [sort];
+  const applySorts = sorts.length !== 0;
+  if (!applySorts) {
+    return items;
+  }
+
+  let sortedItems = [...items];
+
+  sorts.forEach(sort => {
+    const isAscending = sort.asc;  // .startsWith('+');
+    const sortProperty = sort.code;  // .substring(1);
+
+    sortedItems = sortedItems.sort((itemA, itemB) => {
+      const valA = itemA[sortProperty];
+      const valB = itemB[sortProperty];
+      if (typeof valA === 'string' || valA instanceof String) {
+        return isAscending
+          ? valA.toLowerCase().localeCompare(valB.toLowerCase())
+          : valB.toLowerCase().localeCompare(valA.toLowerCase());
+      }
+      if (typeof valB === 'number' || valB instanceof Number) {
+        return isAscending
+          ? valA - valB
+          : valB - valA;
+      }
+      return 0;
+     });
+
+  });
+
+  return sortedItems;
+}
 
 
 const ItemListCard = (props) => {
 
   const classes = useStyles();
-  const theme = useTheme();
 
   const keys = Object.keys(props.items[0]).filter(key => key.startsWith('m_'));
   const minMax = {};
@@ -104,84 +189,150 @@ const ItemListCard = (props) => {
     return newItem;
   });
 
-  const [nameFilter, setNameFilter] = useState('');
-  const [filteredItems, setFilteredItems] = useState([ ... items ]);
+  const originalItems = [...items];
+  const sortedOriginalItems = sortItems([...originalItems], ['+name']);
+
+  const [nameFilter, setNameFilter] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([...items]);
+  const SORTS = [
+    { code: 'name', name: 'Name', asc: true},
+    { code: 'm_speed_land', name: 'Speed', asc: false},
+    { code: 'm_acceleration', name: 'Acceleration', asc: false},
+    { code: 'm_weight', name: 'Weight', asc: true},
+    { code: 'm_handling_land', name: 'Handling', asc: false},
+    { code: 'm_traction_offroad', name: 'Grip', asc: false},
+  ];
+  const [currentSort, setCurrentSort] = useState(SORTS[0]);
 
   useEffect(() => {
-    const nameLower = nameFilter.toLowerCase();
-    const applyNameFilter = nameLower.length > 0;
-    const filteredItems = applyNameFilter ? items.filter(item => item.name.toLowerCase().indexOf(nameLower) >= 0) : items;
-    setFilteredItems(filteredItems);
-  }, [ nameFilter ]);
-
-
-  const sortProperties = Object.keys(props.items[0]).sort((a, b) => a.localeCompare(b));
-  const [sortProperty, setSortProperty] = useState('name');
-  const [sortDirection, setSortDirection] = useState('+');
-
-  useEffect(() => {
-    const isAscending = sortDirection === '+';
-    const filteredItems = items.sort((itemA, itemB) => {
-      const valA = itemA[sortProperty];
-      const valB = itemB[sortProperty];
-      if (typeof valA === 'string' || valA instanceof String) {
-        return isAscending
-          ? valA.toLowerCase().localeCompare(valB.toLowerCase())
-          : valB.toLowerCase().localeCompare(valA.toLowerCase());
-      }
-      if (typeof valB === 'number' || valB instanceof Number) {
-        return isAscending
-          ? valA - valB
-          : valB - valA;
-      }
-      return 0;
-     });
-    setFilteredItems(filteredItems);
-  }, [ sortProperty, sortDirection ]);
+    const filteredItems = filterItems(items, nameFilter);
+    const sortedFilteredItems = sortItems(filteredItems, currentSort);
+    setFilteredItems(sortedFilteredItems);
+  }, [ nameFilter, currentSort ]);
 
   const normaliseValue = (value, min, max) => (value - min) * 100 / (max - min);
 
   return (
     <>
-      <Typography variant="h3">
-        {props.title}
-      </Typography>
+      <Card>
+        <CardContent className={classes.slimCard}>
+          <FormGroup>
+            <FormLabel>Filter and sort</FormLabel>
+            <FormControl className={classes.formControl}>
+              {/* https://material-ui.com/api/autocomplete/ */}
+              <Autocomplete
+                multiple
+                options={sortedOriginalItems}
+                limitTags={1}
+                disableCloseOnSelect
+                clearOnBlur
+                clearOnEscape
+                freeSolo
+                fullWidth
+                forcePopupIcon
+                filterSelectedOptions
+                // filterOptions={(options, state) => {
+                //   console.log('options=', options, ', state=', state);
+                // }}
+                getOptionLabel={(option) => {
+                  if (option && option.name) {
+                    return option.name;
+                  }
+                  return option;
+                }}
+                // defaultValue={[]}
+                renderInput={(params) => (
+                  <TextField {...params} variant="standard" label="Drivers" />
+                )}
+                renderOption={(option, { selected }) => (
+                  <React.Fragment>
+                    {/* <Checkbox
+                      icon={icon}
+                      checkedIcon={checkedIcon}
+                      style={{ marginRight: 8 }}
+                      checked={selected}
+                    /> */}
+                    {/* <img width='40px' height='40px' src='/static/images/MK8_BabyDaisy_Icon.png' /> */}
+                    <img width='40px' height='40px' src={option.image_name} />
+                    {option.name}
+                  </React.Fragment>
+                )}
+                onChange={(event, value, reason) => {
+                  // console.log([event, value, reason]);
+                  setNameFilter(value);
+                }}
+              />
+            </FormControl>
 
-      <div>
-        <p>Filter</p>
-        {/* TODO: Collapsible filters with filter summary / auto collapse on scroll */}
-        <TextField id="nameFilter" label="Name" value={nameFilter} onChange={(event) => setNameFilter(event.target.value)} />
-        <Button onClick={() => setNameFilter('')}>Clear</Button>
-      </div>
+            <FormControl className={classes.formControl}>
+              <InputLabel>Sort</InputLabel>
+              <Select
+                fullWidth
+                value={currentSort.code}
+                onChange={(event) => {
+                  const newSortCode = event.target.value;
+                  if (newSortCode === currentSort.code) {
+                    console.log('same');
+                    const newSort = {...currentSort};
+                    newSort.asc = !newSort.asc;
+                    setCurrentSort(newSort);
+                  } else {
+                    console.log('new');
+                    const newSort = SORTS.filter(sort => sort.code === newSortCode)[0];
+                    setCurrentSort(newSort);
+                  }
+                }}
+              >
+                {SORTS.map(sort => <MenuItem fullWidth key={sort.code} value={sort.code}>{sort.name}</MenuItem>)}
+              </Select>
+            </FormControl>
+          </FormGroup>
+        </CardContent>
+      </Card>
 
-      <div>
+      {/* TODO: Collapsible filters with filter summary / auto collapse on scroll */}
+      {/* <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography><FilterListIcon /> Filter</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ display: 'flex', flexDirection: 'column' }}>
+          <TextField id="nameFilter" label="Name" value={nameFilter} onChange={(event) => setNameFilter(event.target.value)} />
+          <Button onClick={() => setNameFilter('')}>Clear</Button>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography><SortIcon /> Sort ({sortDirection}|{sortProperty})</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ display: 'flex', flexDirection: 'column' }}>
+          <FormControl className={classes.formControl}>
+            <InputLabel id="idSortProperty">Property</InputLabel>
+            <Select labelId="idSortProperty" value={sortProperty} onChange={(event) => setSortProperty(event.target.value)}>
+              {sortProperties.map(property => <MenuItem key={property} value={property}>{property}</MenuItem>)}
+            </Select>
+          </FormControl>
+          <Button onClick={() => { setSortProperty('name'); setSortDirection('+'); }}>Reset</Button>
+        </AccordionDetails>
+      </Accordion> */}
+
+      {/* <div>
         <p>Sort</p>
-        <p>sortProperty: {sortProperty} | sortDirection: {sortDirection}</p>
-        <Button onClick={() => { setSortProperty('name'); setSortDirection('+'); }}>Reset</Button>
         <FormControl className={classes.formControl}>
           <InputLabel id="idSortProperty">Property</InputLabel>
           <Select labelId="idSortProperty" value={sortProperty} onChange={(event) => setSortProperty(event.target.value)}>
-            {sortProperties.map(property => {
-              return (
-                <MenuItem key={property} value={property}>{property}</MenuItem>
-              )
-            })}
+            {sortProperties.map(property => <MenuItem key={property} value={property}>{property}</MenuItem>)}
           </Select>
         </FormControl>
         <FormControl className={classes.formControl}>
           <InputLabel id="idSortDirection">Direction</InputLabel>
           <Select labelId="idSortDirection" value={sortDirection} onChange={(event) => setSortDirection(event.target.value)}>
-            {[ '+', '-' ].map(direction => {
-              return (
-                <MenuItem key={direction} value={direction}>{direction}</MenuItem>
-              )
-            })}
+            {[ '+', '-' ].map(direction => <MenuItem key={direction} value={direction}>{direction}</MenuItem>)}
           </Select>
         </FormControl>
-        {/* <pre>{JSON.stringify(sortProperties, null, 2)}</pre> */}
-      </div>
+      </div> */}
 
-      <p>{filteredItems.length} driver(s)</p>
+      <Typography variant="body2" className={classes.resultsText}>{filteredItems.length} driver(s)</Typography>
 
       <Box>
         {filteredItems.map(item => {
@@ -191,7 +342,7 @@ const ItemListCard = (props) => {
                 <CardMedia
                   className={classes.cover}
                   title={item.name}
-                  image='/static/images/MK8_BabyDaisy_Icon.png'
+                  image={item.image_name}
                 />
                 <div className={classes.details}>
                   <CardContent>
