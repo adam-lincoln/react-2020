@@ -108,7 +108,12 @@ const filterItems = (items, filters) => {
 
 
 const sortItems = (items, sort) => {
-  const sorts = [sort];
+
+  const sorts = [];
+  if (sort) {
+    sorts.push(sort);
+  }
+
   const applySorts = sorts.length !== 0;
   if (!applySorts) {
     return items;
@@ -117,8 +122,8 @@ const sortItems = (items, sort) => {
   let sortedItems = [...items];
 
   sorts.forEach(sort => {
-    const isAscending = sort.asc;  // .startsWith('+');
-    const sortProperty = sort.code;  // .substring(1);
+    const isAscending = sort.startsWith('+');
+    const sortProperty = sort.substring(1);
 
     sortedItems = sortedItems.sort((itemA, itemB) => {
       const valA = itemA[sortProperty];
@@ -139,6 +144,7 @@ const sortItems = (items, sort) => {
   });
 
   return sortedItems;
+
 }
 
 
@@ -206,21 +212,32 @@ const ItemListCard = (props) => {
 
 
   const SORTS = [
-    { code: 'name', name: 'Name', asc: true},
-    { code: 'm_speed_land', name: 'Speed', asc: false},
-    { code: 'm_acceleration', name: 'Acceleration', asc: false},
-    { code: 'm_weight', name: 'Weight', asc: true},
-    { code: 'm_handling_land', name: 'Handling', asc: false},
-    { code: 'm_traction_offroad', name: 'Grip', asc: false},
+    { code: '+name', name: '+Name'},
+    { code: '-name', name: '-Name'},
+
+    { code: '+m_speed_land', name: '+Speed'},
+    { code: '-m_speed_land', name: '-Speed'},
+
+    { code: '+m_acceleration', name: '+Acceleration'},
+    { code: '-m_acceleration', name: '-Acceleration'},
+
+    { code: '+m_weight', name: '+Weight'},
+    { code: '-m_weight', name: '-Weight'},
+
+    { code: '+m_handling_land', name: '+Handling'},
+    { code: '-m_handling_land', name: '-Handling'},
+
+    { code: '+m_traction_offroad', name: '+Grip'},
+    { code: '-m_traction_offroad', name: '-Grip'},
   ];
 
 
   const originalItems = [...items];
-  const sortedOriginalItems = sortItems([...originalItems], SORTS[0]);
+  const sortedOriginalItems = sortItems([...originalItems], SORTS[0].code);
 
   const [nameFilter, setNameFilter] = useState([]);
   const [filteredItems, setFilteredItems] = useState([...items]);
-  const [currentSort, setCurrentSort] = useState(SORTS[0]);
+  const [currentSort, setCurrentSort] = useState(SORTS[0].code);
 
   useEffect(() => {
     const filteredItems = filterItems(items, nameFilter);
@@ -271,8 +288,19 @@ const ItemListCard = (props) => {
                       checked={selected}
                     /> */}
                     {/* <img width='40px' height='40px' src='/static/images/MK8_BabyDaisy_Icon.png' /> */}
-                    <img width='40px' height='40px' src={option.image_name} />
-                    {option.name}
+                    <img
+                      width='40px'
+                      height='40px'
+                      src={option.image_name}
+                      style={{
+                        objectFit: 'contain',
+                      }}
+                    />
+                    <Typography style={{
+                      marginLeft: '8px',
+                    }}>
+                      {option.name}
+                    </Typography>
                   </React.Fragment>
                 )}
                 onChange={(event, value, reason) => {
@@ -286,17 +314,18 @@ const ItemListCard = (props) => {
               <InputLabel>Sort</InputLabel>
               <Select
                 fullWidth
-                value={currentSort.code}
+                value={currentSort}
                 onChange={(event) => {
-                  const newSortCode = event.target.value;
-                  if (newSortCode === currentSort.code) {
-                    const newSort = {...currentSort};
-                    newSort.asc = !newSort.asc;
-                    setCurrentSort(newSort);
-                  } else {
-                    const newSort = SORTS.filter(sort => sort.code === newSortCode)[0];
-                    setCurrentSort(newSort);
-                  }
+                  setCurrentSort(event.target.value);
+                  // const newSortCode = event.target.value;
+                  // if (newSortCode === currentSort.code) {
+                  //   const newSort = {...currentSort};
+                  //   newSort.asc = !newSort.asc;
+                  //   setCurrentSort(newSort);
+                  // } else {
+                  //   const newSort = SORTS.filter(sort => sort.code === newSortCode)[0];
+                  //   setCurrentSort(newSort);
+                  // }
                 }}
               >
                 {SORTS.map(sort => <MenuItem fullWidth key={sort.code} value={sort.code}>{sort.name}</MenuItem>)}
