@@ -6,7 +6,6 @@ import { amber, blue, blueGrey, brown, common, cyan,
 } from '@material-ui/core/colors';
 
 import clsx from 'clsx';
-import ItemListCard from '../../components/ItemListCard/ItemListCard';
 import SwipeableViews from 'react-swipeable-views';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
@@ -19,6 +18,8 @@ import Tab from '@material-ui/core/Tab';
 import Zoom from '@material-ui/core/Zoom';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+
+import List from '../List/List';
 
 const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.toolbar,
@@ -54,8 +55,7 @@ const TabPanel = (props) => {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
+      id={`tabpanel-${index}`}
       {...other}
     >
       {value === index && (
@@ -65,13 +65,6 @@ const TabPanel = (props) => {
       )}
     </div>
   );
-}
-
-const a11yProps = (index) => {
-  return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  };
 }
 
 const Layout = (props) => {
@@ -96,32 +89,32 @@ const Layout = (props) => {
           </Typography>
         </Toolbar>
         <Tabs value={value} onChange={(event, newValue) => setValue(newValue)} variant="scrollable" scrollButtons="on">
-          <Tab label="BUILDS" {...a11yProps(0)} />
-          <Tab label="DRIVERS" {...a11yProps(1)} />
-          <Tab label="VEHICLES" {...a11yProps(2)} />
-          <Tab label="TYRES" {...a11yProps(3)} />
-          <Tab label="GLIDERS" {...a11yProps(4)} />
+          <Tab id="0" label="BUILDS" />
+          <Tab id="1" label="DRIVERS" />
+          <Tab id="2" label="VEHICLES" />
+          <Tab id="3" label="TYRES" />
+          <Tab id="4" label="GLIDERS" />
         </Tabs>
       </AppBar>
 
       {/* <div className={classes.offset} style={{ backgroundColor: green[100], }} /> */}
       {/* <div className={classes.offset} style={{ backgroundColor: green[200], }} /> */}
 
-      <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={value} onChangeIndex={(index) => setValue(index)}>
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <ItemListCard title="Builds" items={props.buildList.map(build => build.summary)} />
+      <SwipeableViews index={value} onChangeIndex={(index) => setValue(index)}>
+        <TabPanel index={0} value={value}>
+          <List title="Builds" items={props.buildList.map(build => build.summary)} />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <ItemListCard title="Drivers" items={props.driverList} />
+        <TabPanel index={1} value={value}>
+          <List title="Drivers" items={props.driverList} />
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          <ItemListCard title="Vehicles" items={props.vehicleList} />
+        <TabPanel index={2} value={value}>
+          <List title="Vehicles" items={props.vehicleList} />
         </TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction}>
-          <ItemListCard title="Tyres" items={props.tyreList} />
+        <TabPanel index={3} value={value}>
+          <List title="Tyres" items={props.tyreList} />
         </TabPanel>
-        <TabPanel value={value} index={4} dir={theme.direction}>
-          <ItemListCard title="Gliders" items={props.gliderList} />
+        <TabPanel index={4} value={value}>
+          <List title="Gliders" items={props.gliderList} />
         </TabPanel>
       </SwipeableViews>
 

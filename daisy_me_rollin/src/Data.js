@@ -41,7 +41,8 @@ const generateBuildItem = (driverList, vehicleList, tyreList, gliderList, driver
   const summaryModel = {
     code: models.map(model => model.code).join(':'),
     name: models.map(model => model.name).join(', '),
-    image_name: driverModel.image_name,
+    type: 'summary',
+    image_name: models.map(model => model.image_name),
   }
 
   Object.keys(driverModel)

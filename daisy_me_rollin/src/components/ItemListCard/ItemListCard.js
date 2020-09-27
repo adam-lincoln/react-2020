@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { amber, blue, blueGrey, brown, common, cyan, deepOrange, deepPurple, green, grey, indigo, lightBlue, lightGreen, lime, orange, pink, purple, red, teal, yellow,  } from '@material-ui/core/colors';
+import { amber, blue, blueGrey, brown, common, cyan,
+  deepOrange, deepPurple, green, grey, indigo, lightBlue,
+  lightGreen, lime, orange, pink, purple, red, teal, yellow
+} from '@material-ui/core/colors';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -86,7 +89,6 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     width: 100,
     backgroundSize: 'contain',
-    // backgroundColor: orange[100],
   },
 }));
 
