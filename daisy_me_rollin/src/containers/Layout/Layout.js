@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles, useTheme  } from '@material-ui/core/styles';
-import { amber, blue, blueGrey, brown, common, cyan,
-  deepOrange, deepPurple, green, grey, indigo, lightBlue,
-  lightGreen, lime, orange, pink, purple, red, teal, yellow
-} from '@material-ui/core/colors';
 
-import clsx from 'clsx';
-import SwipeableViews from 'react-swipeable-views';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -21,12 +15,13 @@ import AddIcon from '@material-ui/icons/Add';
 
 import List from '../List/List';
 
+import SwipeableViews from 'react-swipeable-views';
+import { bindKeyboard } from 'react-swipeable-views-utils';
+const BindKeyboardSwipeableViews = bindKeyboard(SwipeableViews);
+
 const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.toolbar,
   root: {
-    // flexGrow: 1,
-    // padding: 0,
-    // margin: 0,
   },
   menuButton: {
     marginRight: theme.spacing(1),
@@ -40,46 +35,26 @@ const useStyles = makeStyles((theme) => ({
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
-  fabGreen: {
-    color: theme.palette.common.white,
-    backgroundColor: green[500],
-    '&:hover': {
-      backgroundColor: green[600],
-    },
-  },
 }));
 
-const TabPanel = (props) => {
-  const { children, value, index, ...other } = props;
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`tabpanel-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={1}>
-          {children}
-        </Box>
-      )}
-    </div>
-  );
-}
 
 const Layout = (props) => {
-  const classes = useStyles();
-  const theme = useTheme();
-  const [value, setValue] = useState(0);
 
+  const classes = useStyles();
+
+  const theme = useTheme();
   const transitionDuration = {
     enter: theme.transitions.duration.enteringScreen,
     exit: theme.transitions.duration.leavingScreen,
   };
 
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const summaryList = props.buildList.map(build => build.summary);
+
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
@@ -88,50 +63,56 @@ const Layout = (props) => {
             Daisy me rollin'
           </Typography>
         </Toolbar>
-        <Tabs value={value} onChange={(event, newValue) => setValue(newValue)} variant="scrollable" scrollButtons="on">
-          <Tab id="0" label="BUILDS" />
-          <Tab id="1" label="DRIVERS" />
-          <Tab id="2" label="VEHICLES" />
-          <Tab id="3" label="TYRES" />
-          <Tab id="4" label="GLIDERS" />
+        <Tabs
+          value={tabIndex}
+          onChange={(event, val) => setTabIndex(val)}
+          variant="scrollable"
+          scrollButtons="on"
+          >
+          <Tab label="BUILDS" />
+          <Tab label="DRIVERS" />
+          <Tab label="VEHICLES" />
+          <Tab label="TYRES" />
+          <Tab label="GLIDERS" />
         </Tabs>
       </AppBar>
 
-      {/* <div className={classes.offset} style={{ backgroundColor: green[100], }} /> */}
-      {/* <div className={classes.offset} style={{ backgroundColor: green[200], }} /> */}
+      <div className={classes.offset} />
+      <div className={classes.offset} />
 
-      <SwipeableViews index={value} onChangeIndex={(index) => setValue(index)}>
-        <TabPanel index={0} value={value}>
-          <List title="Builds" items={props.buildList.map(build => build.summary)} />
-        </TabPanel>
-        <TabPanel index={1} value={value}>
-          <List title="Drivers" items={props.driverList} />
-        </TabPanel>
-        <TabPanel index={2} value={value}>
-          <List title="Vehicles" items={props.vehicleList} />
-        </TabPanel>
-        <TabPanel index={3} value={value}>
-          <List title="Tyres" items={props.tyreList} />
-        </TabPanel>
-        <TabPanel index={4} value={value}>
-          <List title="Gliders" items={props.gliderList} />
-        </TabPanel>
-      </SwipeableViews>
-
-      {/* <div className={classes.offset} /> */}
+      {/* https://react-swipeable-views.com/demos/demos/ */}
+      <BindKeyboardSwipeableViews
+        index={tabIndex}
+        onChangeIndex={(val) => setTabIndex(val)}
+        >
+        <Box p={1}>
+          <List title="Builds" resultsText="build(s)" items={summaryList} />
+        </Box>
+        <Box p={1}>
+          <List title="Drivers" resultsText="driver(s)" items={props.driverList} />
+        </Box>
+        <Box p={1}>
+          <List title="Vehicles" resultsText="vehicle(s)" items={props.vehicleList} />
+        </Box>
+        <Box p={1}>
+          <List title="Tyres" resultsText="tyres(s)" items={props.tyreList} />
+        </Box>
+        <Box p={1}>
+          <List title="Gliders" resultsText="glider(s)" items={props.gliderList} />
+        </Box>
+      </BindKeyboardSwipeableViews>
 
       <Zoom
-          in={value === 0}
-          timeout={transitionDuration}
-          style={{
-            transitionDelay: `${value === 0 ? transitionDuration.exit : 0}ms`,
-          }}
-          unmountOnExit
-        >
-          <Fab className={classes.fab} color='primary'>
-            <AddIcon />
-          </Fab>
-        </Zoom>
+        in={tabIndex === 0}
+        timeout={transitionDuration}
+        style={{ transitionDelay: `${tabIndex === 0 ? transitionDuration.exit : 0}ms`, }}
+        unmountOnExit
+      >
+        <Fab className={classes.fab} color='primary'>
+          <AddIcon />
+        </Fab>
+      </Zoom>
+
     </div>
   );
 }
