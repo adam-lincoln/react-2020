@@ -16,6 +16,8 @@ import FormGroup from '@material-ui/core/FormGroup';
 import Filter from './Filter';
 import Sort from './Sort';
 import CardStyle1 from './CardStyle1';
+import CardStyle2Summary from './CardStyle2Summary';
+import CardStyle2Item from './CardStyle2Item';
 
 
 const SORTS = [
@@ -36,6 +38,12 @@ const SORTS = [
 
   { code: '+m_traction_offroad', name: '+Grip'},
   { code: '-m_traction_offroad', name: '-Grip'},
+
+  { code: '+total1', name: '+Total1'},
+  { code: '-total1', name: '-Total1'},
+
+  { code: '+total2', name: '+Total2'},
+  { code: '-total2', name: '-Total2'},
 ];
 
 
@@ -126,99 +134,49 @@ const sortItems = (items, sort) => {
 }
 
 
-const getMinMaxValues = (items) => {
-  const keys = Object.keys(items[0]).filter(key => key.startsWith('m_'));
-  const minMax = {};
-  keys.forEach(key => {
-    minMax[key] = {
-      min: items.map(item => item[key]).reduce((a, b) => Math.min(a, b)),
-      max: items.map(item => item[key]).reduce((a, b) => Math.max(a, b)),
-    };
-  });
-  return minMax;
-}
-
-
-const normaliseValue = (val, min, max) => (val - min) * 100 / (max - min);
-
-
-const mapItem = (item, minMax) => {
-  const stats = {};
-
-  stats.speed = {
-    code: 'speed',
-    name: 'Speed',
-    val: item.m_speed_land,
-    min: minMax.m_speed_land.min,
-    max: minMax.m_speed_land.max,
-  }
-
-  stats.acceleration = {
-    code: 'acceleration',
-    name: 'Acceleration',
-    val: item.m_acceleration,
-    min: minMax.m_acceleration.min,
-    max: minMax.m_acceleration.max,
-  }
-
-  stats.weight = {
-    code: 'weight',
-    name: 'Weight',
-    val: item.m_weight,
-    min: minMax.m_weight.min,
-    max: minMax.m_weight.max,
-  }
-
-  stats.handling = {
-    code: 'handling',
-    name: 'Handling',
-    val: item.m_handling_land,
-    min: minMax.m_handling_land.min,
-    max: minMax.m_handling_land.max,
-  }
-
-  stats.grip = {
-    code: 'grip',
-    name: 'Grip',
-    val: item.m_traction_offroad,
-    min: minMax.m_traction_offroad.min,
-    max: minMax.m_traction_offroad.max,
-  }
-
-  Object.keys(stats).forEach(key => {
-    stats[key].pct = normaliseValue(stats[key].val, stats[key].min, stats[key].max);
-  });
-
-  const newItem = { ...item, stats };
-
-  return newItem;
-}
-
-
-const mapItems = (items, minMax) => items.map(item => mapItem(item, minMax));
-
-
 const List = (props) => {
 
   const classes = useStyles();
 
-  const minMax = getMinMaxValues(props.items);
-  const items = mapItems(props.items, minMax);
-  const originalItems = [...items];
+  const originalItems = [...props.items];
   const sortedOriginalItems = sortItems([...originalItems], SORTS[0].code);
 
   const [nameFilter, setNameFilter] = useState([]);
-  const [filteredItems, setFilteredItems] = useState([...items]);
   const [currentSort, setCurrentSort] = useState(SORTS[0].code);
+  const [sortedAndFilteredItems, setSortedAndFilteredItems] = useState([]);
 
-  const cards = filteredItems.map(item =>
-    <CardStyle1 key={item.code} name={item.name} type={item.type} image_name={item.image_name} stats={item.stats} />
-  );
+  const cards = sortedAndFilteredItems.map(item => {
+    if (item.type === 'summary') {
+      return (
+        <CardStyle2Summary
+          key={item.code}
+          name={item.name}
+          type={item.type}
+          image_name={item.image_name}
+          stats={item.stats}
+          total1={item.total1}
+          total2={item.total2}
+        />
+      );
+    } else {
+      return (
+        <CardStyle2Item
+          key={item.code}
+          name={item.name}
+          type={item.type}
+          image_name={item.image_name}
+          stats={item.stats}
+          total1={item.total1}
+          total2={item.total2}
+        />
+      );
+    }
+  });
 
   useEffect(() => {
-    const filteredItems = filterItems(items, nameFilter);
+    const filteredItems = filterItems([...originalItems], nameFilter);
     const sortedFilteredItems = sortItems(filteredItems, currentSort);
-    setFilteredItems(sortedFilteredItems);
+    setSortedAndFilteredItems(sortedFilteredItems);
   }, [ nameFilter, currentSort ]);
 
   return (
@@ -233,7 +191,9 @@ const List = (props) => {
         </CardContent>
       </Card>
 
-      <Typography variant="body2" className={classes.resultsText}>{filteredItems.length} {props.resultsText}</Typography>
+      <Typography variant="body2" className={classes.resultsText}>
+        {sortedAndFilteredItems.length} {props.resultsText}
+      </Typography>
 
       <Box>
         {cards}

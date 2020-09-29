@@ -5,13 +5,15 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import LinearProgress from '@material-ui/core/LinearProgress';
+import LinearProgressWithLabel from './LinearProgressWithLabel';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
   avatar: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
     width: 100,
     backgroundSize: 'contain',
   },
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CardStyle1 = (props) => {
+const CardStyle2Item = (props) => {
 
   const classes = useStyles();
 
@@ -32,21 +34,29 @@ const CardStyle1 = (props) => {
         <CardMedia
           className={classes.avatar}
           title={props.name}
-          image={props.type === 'summary' ? props.image_name[0] : props.image_name}
+          image={props.image_name}
         />
         <div className={classes.details}>
           <CardContent>
             <Typography variant="h6">
               {props.name}
             </Typography>
+            <Typography variant="body2">
+              Total1: {props.total1} | Total2: {props.total2}
+            </Typography>
             <div>
               {Object.keys(props.stats).map(key => {
                 const stat = props.stats[key];
+                // console.log(stat);
                 return (
-                  <div key={stat.code}>
-                    <span>{stat.name}: {stat.val}</span>
-                    <LinearProgress variant="determinate" value={stat.pct} />
-                  </div>
+                  <LinearProgressWithLabel
+                    key={stat.code}
+                    name={stat.name}
+                    val={stat.val}
+                    min={stat.min}
+                    max={stat.max}
+                    pct={stat.pct}
+                    />
                 )
               })}
             </div>
@@ -57,4 +67,4 @@ const CardStyle1 = (props) => {
   );
 }
 
-export default CardStyle1;
+export default CardStyle2Item;
