@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
+import Modal from '../../components/UI/Modal/Modal';
+import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
 const INGREDIENT_PRICES = {
   base: 4.00,
@@ -19,8 +21,9 @@ class BurgerBuilder extends Component {
       cheese: 0,
       meat: 0,
     },
-    totalPrice: INGREDIENT_PRICES.base,
+    price: INGREDIENT_PRICES.base,
     purchasable: false,
+    purchasing: false,
   };
 
   addIngredientHandler = (type) => {
@@ -29,9 +32,9 @@ class BurgerBuilder extends Component {
       const oldCount = ingredients[type];
       const newCount = oldCount + 1;
       ingredients[type] = newCount;
-      const totalPrice = this.calculateTotalPrice(ingredients);
-      const purchasable = totalPrice > INGREDIENT_PRICES.base;
-      return { ingredients, totalPrice, purchasable };
+      const price = this.calculatePrice(ingredients);
+      const purchasable = price > INGREDIENT_PRICES.base;
+      return { ingredients, price, purchasable };
     });
   }
 
@@ -44,41 +47,73 @@ class BurgerBuilder extends Component {
       }
       const newCount = oldCount - 1;
       ingredients[type] = newCount;
-      const totalPrice = this.calculateTotalPrice(ingredients);
-      const purchasable = totalPrice > INGREDIENT_PRICES.base;
-      return { ingredients, totalPrice, purchasable};
+      const price = this.calculatePrice(ingredients);
+      const purchasable = price > INGREDIENT_PRICES.base;
+      return { ingredients, price, purchasable};
     });
   }
 
-  calculateTotalPrice = (ingredients) =>
+  calculatePrice = (ingredients) =>
     INGREDIENT_PRICES.base + Object.keys(ingredients)
       .map(key => {
         const quantity = ingredients[key];
-        const price = INGREDIENT_PRICES[key];
-        return quantity * price;
+        const unitPrice = INGREDIENT_PRICES[key];
+        const linePrice = quantity * unitPrice;
+        return linePrice;
       })
-      .reduce((prevVal, currentVal) => prevVal + currentVal);
+      .reduce((a, b) => a + b);
+
+  purchaseHandler = () => {
+    this.setState((prevState, props) => {
+      return { purchasing: true };
+    });
+  }
+
+  purchaseCancelledHandler = () => {
+    this.setState((prevState, props) => {
+      return { purchasing: false };
+    });
+  }
+
+  purchaseContinueHandler = () => {
+    alert('Continue!');
+    this.setState((prevState, props) => {
+      return { purchasing: false };
+    });
+  }
 
   render() {
-    const disabledInfo = {
-      ...this.state.ingredients
-    };
+
+    const disabledInfo = { ...this.state.ingredients };
     for (let key in disabledInfo) {
-      disabledInfo[key] = disabledInfo[key] <= 0
+      disabledInfo[key] = disabledInfo[key] <= 0;
     }
+
     return (
       <>
-        <pre>State: {JSON.stringify(this.state)}</pre>
+        <Modal
+          show={this.state.purchasing}
+          modalClosed={this.purchaseCancelledHandler}
+          >
+          <OrderSummary
+            ingredients={this.state.ingredients}
+            cancel={this.purchaseCancelledHandler}
+            continue={this.purchaseContinueHandler}
+            price={this.state.price}
+          />
+        </Modal>
         <Burger
           ingredients={this.state.ingredients}
-          />
+        />
         <BuildControls
           addIngredient={this.addIngredientHandler}
           removeIngredient={this.removeIngredientHandler}
           disabled={disabledInfo}
-          price={this.state.totalPrice}
+          price={this.state.price}
           purchasable={this.state.purchasable}
-          />
+          ordered={this.purchaseHandler}
+        />
+        {/* <pre>State: {JSON.stringify(this.state, null, 2)}</pre> */}
       </>
     );
   }

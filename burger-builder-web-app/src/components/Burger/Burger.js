@@ -3,7 +3,7 @@ import withClass from '../../hoc/withClass';
 import styles from './Burger.module.scss';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
-const burger = (props) => {
+const Burger = (props) => {
 
   const transformedIngredients = Object.keys(props.ingredients)
     .map(key => {
@@ -27,4 +27,4 @@ const burger = (props) => {
   );
 }
 
-export default withClass(burger, styles.Burger);
+export default withClass(Burger, styles.Burger);
