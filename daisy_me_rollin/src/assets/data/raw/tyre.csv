@@ -1,4 +1,4 @@
-"code","type","name","image_name","weight","acceleration","traction_onroad","traction_offroad","turbo_mini","speed_land","speed_water","speed_antigravity","speed_air","handling_land","handling_water","handling_antigravity","handling_air"
+"code","type","name","image","pt_weight","pt_acceleration","pt_traction_onroad","pt_traction_offroad","pt_turbo_mini","pt_speed_land","pt_speed_water","pt_speed_antigravity","pt_speed_air","pt_handling_land","pt_handling_water","pt_handling_antigravity","pt_handling_air"
 "","tyre","Standard","StandardTiresMK8.png","2","4","2","5","3","2","3","2","3","3","3","3","3"
 "","tyre","Monster","MonsterTiresMK8.png","4","2","3","7","2","2","2","2","1","0","1","0","1"
 "","tyre","Roller","RollerTiresMK8.png","0","6","0","4","6","0","3","0","3","4","4","4","4"

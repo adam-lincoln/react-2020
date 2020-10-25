@@ -1,4 +1,4 @@
-"code","type","name","image_name","weight","acceleration","traction_onroad","traction_offroad","turbo_mini","speed_land","speed_water","speed_antigravity","speed_air","handling_land","handling_water","handling_antigravity","handling_air"
+"code","type","name","image","pt_weight","pt_acceleration","pt_traction_onroad","pt_traction_offroad","pt_turbo_mini","pt_speed_land","pt_speed_water","pt_speed_antigravity","pt_speed_air","pt_handling_land","pt_handling_water","pt_handling_antigravity","pt_handling_air"
 "","vehicle","Standard Kart","StandardKartBodyMK8.png","2","4","3","3","4","3","3","3","3","3","2","3","3"
 "","vehicle","Pipe Frame","PipeFrameBodyMK8.png","1","6","3","4","6","1","3","1","1","5","4","4","2"
 "","vehicle","Mach 8","Mach8BodyMK8.png","3","3","2","4","4","3","3","5","4","2","2","4","2"

@@ -14,7 +14,11 @@ class OrderSummary extends Component {
     const props = this.props;
 
     const ingredientSummary = Object.keys(props.ingredients)
-      .map(key => <li key={key}><span style={{ textTransform: 'capitalize' }}>{key}</span>: {props.ingredients[key]}</li>);
+      .map(key =>
+        <li key={key}>
+          <span style={{ textTransform: 'capitalize' }}>{key}</span>: {props.ingredients[key]}
+        </li>
+      );
 
     return (
       <>

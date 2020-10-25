@@ -1,0 +1,2840 @@
+[
+  {
+    "code": "mario",
+    "type": "driver",
+    "name": "Mario",
+    "image": "MK8 Mario Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Mario_Icon.png",
+    "points": {
+      "weight": 6,
+      "acceleration": 2,
+      "traction_onroad": 4,
+      "traction_offroad": 2,
+      "turbo_mini": 2,
+      "speed_land": 6,
+      "speed_water": 6,
+      "speed_antigravity": 6,
+      "speed_air": 6,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 4,
+      "handling_air": 4,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "luigi",
+    "type": "driver",
+    "name": "Luigi",
+    "image": "MK8 Luigi Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Luigi_Icon.png",
+    "points": {
+      "weight": 6,
+      "acceleration": 2,
+      "traction_onroad": 5,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 6,
+      "speed_water": 6,
+      "speed_antigravity": 6,
+      "speed_air": 6,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 60
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "peach",
+    "type": "driver",
+    "name": "Peach",
+    "image": "MK8 Peach Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Peach_Icon.png",
+    "points": {
+      "weight": 4,
+      "acceleration": 3,
+      "traction_onroad": 3,
+      "traction_offroad": 3,
+      "turbo_mini": 3,
+      "speed_land": 5,
+      "speed_water": 5,
+      "speed_antigravity": 5,
+      "speed_air": 5,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "daisy",
+    "type": "driver",
+    "name": "Daisy",
+    "image": "MK8 Daisy Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Daisy_Icon.png",
+    "points": {
+      "weight": 4,
+      "acceleration": 3,
+      "traction_onroad": 3,
+      "traction_offroad": 3,
+      "turbo_mini": 3,
+      "speed_land": 5,
+      "speed_water": 5,
+      "speed_antigravity": 5,
+      "speed_air": 5,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "yoshi",
+    "type": "driver",
+    "name": "Yoshi",
+    "image": "MK8 Yoshi Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Yoshi_Icon.png",
+    "points": {
+      "weight": 4,
+      "acceleration": 3,
+      "traction_onroad": 3,
+      "traction_offroad": 3,
+      "turbo_mini": 3,
+      "speed_land": 5,
+      "speed_water": 5,
+      "speed_antigravity": 5,
+      "speed_air": 5,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "toad",
+    "type": "driver",
+    "name": "Toad",
+    "image": "MK8 Toad Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Toad_Icon.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 4,
+      "traction_onroad": 3,
+      "traction_offroad": 4,
+      "turbo_mini": 3,
+      "speed_land": 3,
+      "speed_water": 3,
+      "speed_antigravity": 3,
+      "speed_air": 3,
+      "handling_land": 7,
+      "handling_water": 7,
+      "handling_antigravity": 7,
+      "handling_air": 7,
+      "total": 57
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "toadette",
+    "type": "driver",
+    "name": "Toadette",
+    "image": "MK8 Toadette Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Toadette_Icon.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 5,
+      "traction_onroad": 4,
+      "traction_offroad": 2,
+      "turbo_mini": 4,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 7,
+      "handling_water": 7,
+      "handling_antigravity": 7,
+      "handling_air": 7,
+      "total": 53
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "total": 18
+    }
+  },
+  {
+    "code": "koopa_troopa",
+    "type": "driver",
+    "name": "Koopa Troopa",
+    "image": "MK8 Koopa Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Koopa_Icon.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 4,
+      "traction_onroad": 1,
+      "traction_offroad": 5,
+      "turbo_mini": 4,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 8,
+      "handling_water": 8,
+      "handling_antigravity": 8,
+      "handling_air": 8,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "bowser",
+    "type": "driver",
+    "name": "Bowser",
+    "image": "MK8 Bowser Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Bowser_Icon.png",
+    "points": {
+      "weight": 10,
+      "acceleration": 0,
+      "traction_onroad": 6,
+      "traction_offroad": 0,
+      "turbo_mini": 0,
+      "speed_land": 10,
+      "speed_water": 10,
+      "speed_antigravity": 10,
+      "speed_air": 10,
+      "handling_land": 0,
+      "handling_water": 0,
+      "handling_antigravity": 0,
+      "handling_air": 0,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "donkey_kong",
+    "type": "driver",
+    "name": "Donkey Kong",
+    "image": "MK8 DKong Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_DKong_Icon.png",
+    "points": {
+      "weight": 8,
+      "acceleration": 1,
+      "traction_onroad": 10,
+      "traction_offroad": 0,
+      "turbo_mini": 1,
+      "speed_land": 9,
+      "speed_water": 9,
+      "speed_antigravity": 9,
+      "speed_air": 9,
+      "handling_land": 2,
+      "handling_water": 2,
+      "handling_antigravity": 2,
+      "handling_air": 2,
+      "total": 64
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 9,
+        "min": 0,
+        "max": 10,
+        "pct": 90
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "wario",
+    "type": "driver",
+    "name": "Wario",
+    "image": "MK8 Wario Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Wario_Icon.png",
+    "points": {
+      "weight": 9,
+      "acceleration": 0,
+      "traction_onroad": 5,
+      "traction_offroad": 1,
+      "turbo_mini": 0,
+      "speed_land": 10,
+      "speed_water": 10,
+      "speed_antigravity": 10,
+      "speed_air": 10,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 1,
+      "handling_air": 1,
+      "total": 59
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 9,
+        "min": 0,
+        "max": 10,
+        "pct": 90
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "waluigi",
+    "type": "driver",
+    "name": "Waluigi",
+    "image": "MK8 Waluigi Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Waluigi_Icon.png",
+    "points": {
+      "weight": 8,
+      "acceleration": 1,
+      "traction_onroad": 10,
+      "traction_offroad": 0,
+      "turbo_mini": 1,
+      "speed_land": 9,
+      "speed_water": 9,
+      "speed_antigravity": 9,
+      "speed_air": 9,
+      "handling_land": 2,
+      "handling_water": 2,
+      "handling_antigravity": 2,
+      "handling_air": 2,
+      "total": 64
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 9,
+        "min": 0,
+        "max": 10,
+        "pct": 90
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "rosalina",
+    "type": "driver",
+    "name": "Rosalina",
+    "image": "MK8 Rosalina Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Rosalina_Icon.png",
+    "points": {
+      "weight": 7,
+      "acceleration": 1,
+      "traction_onroad": 9,
+      "traction_offroad": 3,
+      "turbo_mini": 2,
+      "speed_land": 7,
+      "speed_water": 7,
+      "speed_antigravity": 7,
+      "speed_air": 7,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 62
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "metal_mario",
+    "type": "driver",
+    "name": "Metal Mario",
+    "image": "MK8 MMario Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_MMario_Icon.png",
+    "points": {
+      "weight": 10,
+      "acceleration": 1,
+      "traction_onroad": 8,
+      "traction_offroad": 1,
+      "turbo_mini": 1,
+      "speed_land": 8,
+      "speed_water": 8,
+      "speed_antigravity": 8,
+      "speed_air": 8,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 65
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 23
+    }
+  },
+  {
+    "code": "pink_gold_peach",
+    "type": "driver",
+    "name": "Pink Gold Peach",
+    "image": "MK8 PGPeach Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_PGPeach_Icon.png",
+    "points": {
+      "weight": 10,
+      "acceleration": 1,
+      "traction_onroad": 8,
+      "traction_offroad": 1,
+      "turbo_mini": 1,
+      "speed_land": 8,
+      "speed_water": 8,
+      "speed_antigravity": 8,
+      "speed_air": 8,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 65
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 23
+    }
+  },
+  {
+    "code": "lakitu",
+    "type": "driver",
+    "name": "Lakitu",
+    "image": "MK8 Lakitu Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Lakitu_Icon.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 4,
+      "traction_onroad": 1,
+      "traction_offroad": 5,
+      "turbo_mini": 4,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 8,
+      "handling_water": 8,
+      "handling_antigravity": 8,
+      "handling_air": 8,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "shy_guy",
+    "type": "driver",
+    "name": "Shy Guy",
+    "image": "MK8 ShyGuy Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_ShyGuy_Icon.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 4,
+      "traction_onroad": 3,
+      "traction_offroad": 4,
+      "turbo_mini": 3,
+      "speed_land": 3,
+      "speed_water": 3,
+      "speed_antigravity": 3,
+      "speed_air": 3,
+      "handling_land": 7,
+      "handling_water": 7,
+      "handling_antigravity": 7,
+      "handling_air": 7,
+      "total": 57
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "baby_mario",
+    "type": "driver",
+    "name": "Baby Mario",
+    "image": "MK8 BabyMario Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_BabyMario_Icon.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 5,
+      "traction_onroad": 2,
+      "traction_offroad": 4,
+      "turbo_mini": 4,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 8,
+      "handling_water": 8,
+      "handling_antigravity": 8,
+      "handling_air": 8,
+      "total": 52
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "total": 19
+    }
+  },
+  {
+    "code": "baby_luigi",
+    "type": "driver",
+    "name": "Baby Luigi",
+    "image": "MK8 BabyLuigi Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_BabyLuigi_Icon.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 5,
+      "traction_onroad": 2,
+      "traction_offroad": 4,
+      "turbo_mini": 4,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 8,
+      "handling_water": 8,
+      "handling_antigravity": 8,
+      "handling_air": 8,
+      "total": 52
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "total": 19
+    }
+  },
+  {
+    "code": "baby_peach",
+    "type": "driver",
+    "name": "Baby Peach",
+    "image": "MK8 BabyPeach Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_BabyPeach_Icon.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 4,
+      "traction_onroad": 3,
+      "traction_offroad": 5,
+      "turbo_mini": 5,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 0,
+      "speed_air": 0,
+      "handling_land": 10,
+      "handling_water": 10,
+      "handling_antigravity": 10,
+      "handling_air": 10,
+      "total": 57
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "total": 19
+    }
+  },
+  {
+    "code": "baby_daisy",
+    "type": "driver",
+    "name": "Baby Daisy",
+    "image": "MK8 BabyDaisy Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_BabyDaisy_Icon.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 4,
+      "traction_onroad": 3,
+      "traction_offroad": 5,
+      "turbo_mini": 5,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 0,
+      "speed_air": 0,
+      "handling_land": 10,
+      "handling_water": 10,
+      "handling_antigravity": 10,
+      "handling_air": 10,
+      "total": 57
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "total": 19
+    }
+  },
+  {
+    "code": "baby_rosalina",
+    "type": "driver",
+    "name": "Baby Rosalina",
+    "image": "MK8 BabyRosalina Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_BabyRosalina_Icon.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 5,
+      "traction_onroad": 4,
+      "traction_offroad": 3,
+      "turbo_mini": 5,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 0,
+      "speed_air": 0,
+      "handling_land": 9,
+      "handling_water": 9,
+      "handling_antigravity": 9,
+      "handling_air": 9,
+      "total": 53
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 9,
+        "min": 0,
+        "max": 10,
+        "pct": 90
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 17
+    }
+  },
+  {
+    "code": "larry",
+    "type": "driver",
+    "name": "Larry",
+    "image": "MK8 Larry Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Larry_Icon.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 4,
+      "traction_onroad": 3,
+      "traction_offroad": 4,
+      "turbo_mini": 3,
+      "speed_land": 3,
+      "speed_water": 3,
+      "speed_antigravity": 3,
+      "speed_air": 3,
+      "handling_land": 7,
+      "handling_water": 7,
+      "handling_antigravity": 7,
+      "handling_air": 7,
+      "total": 57
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "lemmy",
+    "type": "driver",
+    "name": "Lemmy",
+    "image": "MK8 Lemmy Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Lemmy_Icon.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 5,
+      "traction_onroad": 4,
+      "traction_offroad": 3,
+      "turbo_mini": 5,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 0,
+      "speed_air": 0,
+      "handling_land": 9,
+      "handling_water": 9,
+      "handling_antigravity": 9,
+      "handling_air": 9,
+      "total": 53
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 9,
+        "min": 0,
+        "max": 10,
+        "pct": 90
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 17
+    }
+  },
+  {
+    "code": "wendy",
+    "type": "driver",
+    "name": "Wendy",
+    "image": "MK8 Wendy Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Wendy_Icon.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 5,
+      "traction_onroad": 4,
+      "traction_offroad": 2,
+      "turbo_mini": 4,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 7,
+      "handling_water": 7,
+      "handling_antigravity": 7,
+      "handling_air": 7,
+      "total": 53
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "total": 18
+    }
+  },
+  {
+    "code": "ludwig",
+    "type": "driver",
+    "name": "Ludwig",
+    "image": "MK8 Ludwig Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Ludwig_Icon.png",
+    "points": {
+      "weight": 6,
+      "acceleration": 2,
+      "traction_onroad": 4,
+      "traction_offroad": 2,
+      "turbo_mini": 2,
+      "speed_land": 6,
+      "speed_water": 6,
+      "speed_antigravity": 6,
+      "speed_air": 6,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 4,
+      "handling_air": 4,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "iggy",
+    "type": "driver",
+    "name": "Iggy",
+    "image": "MK8 Iggy Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Iggy_Icon.png",
+    "points": {
+      "weight": 6,
+      "acceleration": 2,
+      "traction_onroad": 5,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 6,
+      "speed_water": 6,
+      "speed_antigravity": 6,
+      "speed_air": 6,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 60
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "roy",
+    "type": "driver",
+    "name": "Roy",
+    "image": "MK8 Roy Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Roy_Icon.png",
+    "points": {
+      "weight": 8,
+      "acceleration": 1,
+      "traction_onroad": 10,
+      "traction_offroad": 0,
+      "turbo_mini": 1,
+      "speed_land": 9,
+      "speed_water": 9,
+      "speed_antigravity": 9,
+      "speed_air": 9,
+      "handling_land": 2,
+      "handling_water": 2,
+      "handling_antigravity": 2,
+      "handling_air": 2,
+      "total": 64
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 9,
+        "min": 0,
+        "max": 10,
+        "pct": 90
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "morton",
+    "type": "driver",
+    "name": "Morton",
+    "image": "MK8 Morton Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Morton_Icon.png",
+    "points": {
+      "weight": 10,
+      "acceleration": 0,
+      "traction_onroad": 6,
+      "traction_offroad": 0,
+      "turbo_mini": 0,
+      "speed_land": 10,
+      "speed_water": 10,
+      "speed_antigravity": 10,
+      "speed_air": 10,
+      "handling_land": 0,
+      "handling_water": 0,
+      "handling_antigravity": 0,
+      "handling_air": 0,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 0,
+        "min": 0,
+        "max": 10,
+        "pct": 0
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "mii_medium_",
+    "type": "driver",
+    "name": "Mii (medium)",
+    "image": "Mii MK8.png",
+    "image_url": "/static/images/downloaded/64px-Mii_MK8.png",
+    "points": {
+      "weight": 6,
+      "acceleration": 2,
+      "traction_onroad": 4,
+      "traction_offroad": 2,
+      "turbo_mini": 2,
+      "speed_land": 6,
+      "speed_water": 6,
+      "speed_antigravity": 6,
+      "speed_air": 6,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 4,
+      "handling_air": 4,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "tanooki_mario",
+    "type": "driver",
+    "name": "Tanooki Mario",
+    "image": "MK8 Tanooki Mario Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Tanooki_Mario_Icon.png",
+    "points": {
+      "weight": 5,
+      "acceleration": 3,
+      "traction_onroad": 7,
+      "traction_offroad": 1,
+      "turbo_mini": 3,
+      "speed_land": 5,
+      "speed_water": 5,
+      "speed_antigravity": 5,
+      "speed_air": 5,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 59
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 19
+    }
+  },
+  {
+    "code": "link",
+    "type": "driver",
+    "name": "Link",
+    "image": "MK8 Link Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Link_Icon.png",
+    "points": {
+      "weight": 7,
+      "acceleration": 1,
+      "traction_onroad": 9,
+      "traction_offroad": 3,
+      "turbo_mini": 2,
+      "speed_land": 7,
+      "speed_water": 7,
+      "speed_antigravity": 7,
+      "speed_air": 7,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 62
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "villager_male_",
+    "type": "driver",
+    "name": "Villager (male)",
+    "image": "VillagerMale-Icon-MK8.png",
+    "image_url": "/static/images/downloaded/64px-VillagerMale-Icon-MK8.png",
+    "points": {
+      "weight": 5,
+      "acceleration": 3,
+      "traction_onroad": 7,
+      "traction_offroad": 1,
+      "turbo_mini": 3,
+      "speed_land": 5,
+      "speed_water": 5,
+      "speed_antigravity": 5,
+      "speed_air": 5,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 59
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 19
+    }
+  },
+  {
+    "code": "isabelle",
+    "type": "driver",
+    "name": "Isabelle",
+    "image": "MK8 Isabelle Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Isabelle_Icon.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 5,
+      "traction_onroad": 4,
+      "traction_offroad": 2,
+      "turbo_mini": 4,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 7,
+      "handling_water": 7,
+      "handling_antigravity": 7,
+      "handling_air": 7,
+      "total": 53
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 5,
+        "pct": 40
+      },
+      "total": 18
+    }
+  },
+  {
+    "code": "cat_peach",
+    "type": "driver",
+    "name": "Cat Peach",
+    "image": "MK8 Cat Peach Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Cat_Peach_Icon.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 3,
+      "turbo_mini": 3,
+      "speed_land": 4,
+      "speed_water": 4,
+      "speed_antigravity": 4,
+      "speed_air": 4,
+      "handling_land": 6,
+      "handling_water": 6,
+      "handling_antigravity": 6,
+      "handling_air": 6,
+      "total": 55
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "dry_bowser",
+    "type": "driver",
+    "name": "Dry Bowser",
+    "image": "MK8 Dry Bowser Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Dry_Bowser_Icon.png",
+    "points": {
+      "weight": 9,
+      "acceleration": 0,
+      "traction_onroad": 5,
+      "traction_offroad": 1,
+      "turbo_mini": 0,
+      "speed_land": 10,
+      "speed_water": 10,
+      "speed_antigravity": 10,
+      "speed_air": 10,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 1,
+      "handling_air": 1,
+      "total": 59
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 0,
+        "min": 0,
+        "max": 5,
+        "pct": 0
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 9,
+        "min": 0,
+        "max": 10,
+        "pct": 90
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "villager_female_",
+    "type": "driver",
+    "name": "Villager (female)",
+    "image": "VillagerFemale-Icon-MK8.png",
+    "image_url": "/static/images/downloaded/64px-VillagerFemale-Icon-MK8.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 3,
+      "turbo_mini": 3,
+      "speed_land": 4,
+      "speed_water": 4,
+      "speed_antigravity": 4,
+      "speed_air": 4,
+      "handling_land": 6,
+      "handling_water": 6,
+      "handling_antigravity": 6,
+      "handling_air": 6,
+      "total": 55
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "gold_mario",
+    "type": "driver",
+    "name": "Gold Mario",
+    "image": "MK8DX Gold Mario Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8DX_Gold_Mario_Icon.png",
+    "points": {
+      "weight": 10,
+      "acceleration": 1,
+      "traction_onroad": 8,
+      "traction_offroad": 1,
+      "turbo_mini": 1,
+      "speed_land": 8,
+      "speed_water": 8,
+      "speed_antigravity": 8,
+      "speed_air": 8,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 65
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 10,
+        "min": 0,
+        "max": 10,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 23
+    }
+  },
+  {
+    "code": "dry_bones",
+    "type": "driver",
+    "name": "Dry Bones",
+    "image": "MK8DX Dry Bones Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8DX_Dry_Bones_Icon.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 5,
+      "traction_onroad": 2,
+      "traction_offroad": 4,
+      "turbo_mini": 4,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 8,
+      "handling_water": 8,
+      "handling_antigravity": 8,
+      "handling_air": 8,
+      "total": 52
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 10,
+        "pct": 10
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "total": 19
+    }
+  },
+  {
+    "code": "bowser_jr_",
+    "type": "driver",
+    "name": "Bowser Jr.",
+    "image": "MK8 Bowser Jr Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8_Bowser_Jr_Icon.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 4,
+      "traction_onroad": 1,
+      "traction_offroad": 5,
+      "turbo_mini": 4,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 8,
+      "handling_water": 8,
+      "handling_antigravity": 8,
+      "handling_air": 8,
+      "total": 56
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 10,
+        "pct": 20
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 8,
+        "min": 0,
+        "max": 10,
+        "pct": 80
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 5,
+        "pct": 100
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "king_boo",
+    "type": "driver",
+    "name": "King Boo",
+    "image": "MK8DX King Boo Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8DX_King_Boo_Icon.png",
+    "points": {
+      "weight": 7,
+      "acceleration": 1,
+      "traction_onroad": 9,
+      "traction_offroad": 3,
+      "turbo_mini": 2,
+      "speed_land": 7,
+      "speed_water": 7,
+      "speed_antigravity": 7,
+      "speed_air": 7,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 62
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 7,
+        "min": 0,
+        "max": 10,
+        "pct": 70
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 21
+    }
+  },
+  {
+    "code": "inkling_girl",
+    "type": "driver",
+    "name": "Inkling Girl",
+    "image": "MK8DX Female Inkling Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8DX_Female_Inkling_Icon.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 3,
+      "turbo_mini": 3,
+      "speed_land": 4,
+      "speed_water": 4,
+      "speed_antigravity": 4,
+      "speed_air": 4,
+      "handling_land": 6,
+      "handling_water": 6,
+      "handling_antigravity": 6,
+      "handling_air": 6,
+      "total": 55
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 4,
+        "min": 0,
+        "max": 10,
+        "pct": 40
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 5,
+        "pct": 80
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 10,
+        "pct": 30
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 6,
+        "min": 0,
+        "max": 10,
+        "pct": 60
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "total": 20
+    }
+  },
+  {
+    "code": "inkling_boy",
+    "type": "driver",
+    "name": "Inkling Boy",
+    "image": "MK8DX Male Inkling Icon.png",
+    "image_url": "/static/images/downloaded/64px-MK8DX_Male_Inkling_Icon.png",
+    "points": {
+      "weight": 5,
+      "acceleration": 3,
+      "traction_onroad": 7,
+      "traction_offroad": 1,
+      "turbo_mini": 3,
+      "speed_land": 5,
+      "speed_water": 5,
+      "speed_antigravity": 5,
+      "speed_air": 5,
+      "handling_land": 5,
+      "handling_water": 5,
+      "handling_antigravity": 5,
+      "handling_air": 5,
+      "total": 59
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 5,
+        "pct": 60
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 5,
+        "min": 0,
+        "max": 10,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 5,
+        "pct": 20
+      },
+      "total": 19
+    }
+  }
+]

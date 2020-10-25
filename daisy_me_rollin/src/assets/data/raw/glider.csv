@@ -1,4 +1,4 @@
-"code","type","name","image_name","weight","acceleration","traction_onroad","traction_offroad","turbo_mini","speed_land","speed_water","speed_antigravity","speed_air","handling_land","handling_water","handling_antigravity","handling_air"
+"code","type","name","image","pt_weight","pt_acceleration","pt_traction_onroad","pt_traction_offroad","pt_turbo_mini","pt_speed_land","pt_speed_water","pt_speed_antigravity","pt_speed_air","pt_handling_land","pt_handling_water","pt_handling_antigravity","pt_handling_air"
 "","glider","Super Glider","SuperGliderMK8.png","1","1","1","1","1","1","1","0","2","1","0","1","1"
 "","glider","Cloud Glider","Cloud Glider.png","0","2","1","1","2","0","1","1","1","1","0","1","2"
 "","glider","Wario Wing","WarioWingMK8.png","2","1","2","0","1","1","0","1","2","1","1","0","1"

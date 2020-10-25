@@ -1,0 +1,1388 @@
+[
+  {
+    "code": "standard",
+    "type": "tyre",
+    "name": "Standard",
+    "image": "StandardTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-StandardTiresMK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 5,
+      "turbo_mini": 3,
+      "speed_land": 2,
+      "speed_water": 3,
+      "speed_antigravity": 2,
+      "speed_air": 3,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 38
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 6,
+        "pct": 67
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 7,
+        "pct": 71
+      },
+      "total": 16
+    }
+  },
+  {
+    "code": "monster",
+    "type": "tyre",
+    "name": "Monster",
+    "image": "MonsterTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-MonsterTiresMK8.png",
+    "points": {
+      "weight": 4,
+      "acceleration": 2,
+      "traction_onroad": 3,
+      "traction_offroad": 7,
+      "turbo_mini": 2,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 1,
+      "handling_land": 0,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 1,
+      "total": 27
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 6,
+        "pct": 33
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 7,
+        "min": 0,
+        "max": 7,
+        "pct": 100
+      },
+      "total": 15
+    }
+  },
+  {
+    "code": "roller",
+    "type": "tyre",
+    "name": "Roller",
+    "image": "RollerTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-RollerTiresMK8.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 6,
+      "traction_onroad": 0,
+      "traction_offroad": 4,
+      "turbo_mini": 6,
+      "speed_land": 0,
+      "speed_water": 3,
+      "speed_antigravity": 0,
+      "speed_air": 3,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 4,
+      "handling_air": 4,
+      "total": 38
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 6,
+        "min": 0,
+        "max": 6,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 7,
+        "pct": 57
+      },
+      "total": 14
+    }
+  },
+  {
+    "code": "slim",
+    "type": "tyre",
+    "name": "Slim",
+    "image": "SlimTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-SlimTiresMK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 2,
+      "traction_onroad": 4,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 3,
+      "speed_water": 2,
+      "speed_antigravity": 4,
+      "speed_air": 2,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 3,
+      "handling_air": 4,
+      "total": 37
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 6,
+        "pct": 33
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 7,
+        "pct": 14
+      },
+      "total": 12
+    }
+  },
+  {
+    "code": "slick",
+    "type": "tyre",
+    "name": "Slick",
+    "image": "SlickTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-SlickTiresMK8.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 1,
+      "traction_onroad": 4,
+      "traction_offroad": 0,
+      "turbo_mini": 0,
+      "speed_land": 4,
+      "speed_water": 0,
+      "speed_antigravity": 4,
+      "speed_air": 0,
+      "handling_land": 2,
+      "handling_water": 0,
+      "handling_antigravity": 2,
+      "handling_air": 1,
+      "total": 21
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 6,
+        "pct": 17
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 7,
+        "pct": 0
+      },
+      "total": 10
+    }
+  },
+  {
+    "code": "metal",
+    "type": "tyre",
+    "name": "Metal",
+    "image": "MetalTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-MetalTiresMK8.png",
+    "points": {
+      "weight": 4,
+      "acceleration": 0,
+      "traction_onroad": 1,
+      "traction_offroad": 2,
+      "turbo_mini": 0,
+      "speed_land": 4,
+      "speed_water": 3,
+      "speed_antigravity": 1,
+      "speed_air": 2,
+      "handling_land": 2,
+      "handling_water": 2,
+      "handling_antigravity": 1,
+      "handling_air": 0,
+      "total": 22
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 0,
+        "min": 0,
+        "max": 6,
+        "pct": 0
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 7,
+        "pct": 29
+      },
+      "total": 12
+    }
+  },
+  {
+    "code": "button",
+    "type": "tyre",
+    "name": "Button",
+    "image": "ButtonTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-ButtonTiresMK8.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 5,
+      "traction_onroad": 1,
+      "traction_offroad": 3,
+      "turbo_mini": 5,
+      "speed_land": 1,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 4,
+      "handling_air": 2,
+      "total": 33
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 6,
+        "pct": 83
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 7,
+        "pct": 43
+      },
+      "total": 12
+    }
+  },
+  {
+    "code": "off_road",
+    "type": "tyre",
+    "name": "Off-Road",
+    "image": "Off-Road.png",
+    "image_url": "/static/images/downloaded/100px-Off-Road.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 3,
+      "traction_onroad": 3,
+      "traction_offroad": 6,
+      "turbo_mini": 1,
+      "speed_land": 3,
+      "speed_water": 4,
+      "speed_antigravity": 2,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 2,
+      "handling_air": 2,
+      "total": 32
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 6,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 6,
+        "min": 0,
+        "max": 7,
+        "pct": 86
+      },
+      "total": 16
+    }
+  },
+  {
+    "code": "sponge",
+    "type": "tyre",
+    "name": "Sponge",
+    "image": "SpongeTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-SpongeTiresMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 6,
+      "turbo_mini": 4,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 4,
+      "handling_land": 2,
+      "handling_water": 1,
+      "handling_antigravity": 2,
+      "handling_air": 3,
+      "total": 32
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 6,
+        "pct": 67
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 6,
+        "min": 0,
+        "max": 7,
+        "pct": 86
+      },
+      "total": 14
+    }
+  },
+  {
+    "code": "wooden",
+    "type": "tyre",
+    "name": "Wooden",
+    "image": "WoodTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-WoodTiresMK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 2,
+      "traction_onroad": 4,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 3,
+      "speed_water": 2,
+      "speed_antigravity": 4,
+      "speed_air": 2,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 3,
+      "handling_air": 4,
+      "total": 37
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 6,
+        "pct": 33
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 7,
+        "pct": 14
+      },
+      "total": 12
+    }
+  },
+  {
+    "code": "cushion",
+    "type": "tyre",
+    "name": "Cushion",
+    "image": "CushionTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-CushionTiresMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 6,
+      "turbo_mini": 4,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 4,
+      "handling_land": 2,
+      "handling_water": 1,
+      "handling_antigravity": 2,
+      "handling_air": 3,
+      "total": 32
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 6,
+        "pct": 67
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 6,
+        "min": 0,
+        "max": 7,
+        "pct": 86
+      },
+      "total": 14
+    }
+  },
+  {
+    "code": "normal_blue",
+    "type": "tyre",
+    "name": "Normal Blue",
+    "image": "Blue Standard.png",
+    "image_url": "/static/images/downloaded/100px-Blue_Standard.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 5,
+      "turbo_mini": 3,
+      "speed_land": 2,
+      "speed_water": 3,
+      "speed_antigravity": 2,
+      "speed_air": 3,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 38
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 6,
+        "pct": 67
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 7,
+        "pct": 71
+      },
+      "total": 16
+    }
+  },
+  {
+    "code": "funky_monster",
+    "type": "tyre",
+    "name": "Funky Monster",
+    "image": "HotMonsterTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-HotMonsterTiresMK8.png",
+    "points": {
+      "weight": 4,
+      "acceleration": 2,
+      "traction_onroad": 3,
+      "traction_offroad": 7,
+      "turbo_mini": 2,
+      "speed_land": 2,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 1,
+      "handling_land": 0,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 1,
+      "total": 27
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 6,
+        "pct": 33
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 7,
+        "min": 0,
+        "max": 7,
+        "pct": 100
+      },
+      "total": 15
+    }
+  },
+  {
+    "code": "azure_roller",
+    "type": "tyre",
+    "name": "Azure Roller",
+    "image": "AzureRollerTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-AzureRollerTiresMK8.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 6,
+      "traction_onroad": 0,
+      "traction_offroad": 4,
+      "turbo_mini": 6,
+      "speed_land": 0,
+      "speed_water": 3,
+      "speed_antigravity": 0,
+      "speed_air": 3,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 4,
+      "handling_air": 4,
+      "total": 38
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 6,
+        "min": 0,
+        "max": 6,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 4,
+        "min": 0,
+        "max": 7,
+        "pct": 57
+      },
+      "total": 14
+    }
+  },
+  {
+    "code": "crimson_slim",
+    "type": "tyre",
+    "name": "Crimson Slim",
+    "image": "CrimsonSlimTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-CrimsonSlimTiresMK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 2,
+      "traction_onroad": 4,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 3,
+      "speed_water": 2,
+      "speed_antigravity": 4,
+      "speed_air": 2,
+      "handling_land": 4,
+      "handling_water": 4,
+      "handling_antigravity": 3,
+      "handling_air": 4,
+      "total": 37
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 6,
+        "pct": 33
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 7,
+        "pct": 14
+      },
+      "total": 12
+    }
+  },
+  {
+    "code": "cyber_slick",
+    "type": "tyre",
+    "name": "Cyber Slick",
+    "image": "CyberSlickTiresMK8.png",
+    "image_url": "/static/images/downloaded/100px-CyberSlickTiresMK8.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 1,
+      "traction_onroad": 4,
+      "traction_offroad": 0,
+      "turbo_mini": 0,
+      "speed_land": 4,
+      "speed_water": 0,
+      "speed_antigravity": 4,
+      "speed_air": 0,
+      "handling_land": 2,
+      "handling_water": 0,
+      "handling_antigravity": 2,
+      "handling_air": 1,
+      "total": 21
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 6,
+        "pct": 17
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 7,
+        "pct": 0
+      },
+      "total": 10
+    }
+  },
+  {
+    "code": "retro_off_road",
+    "type": "tyre",
+    "name": "Retro Off-Road",
+    "image": "Retro Off-Road.png",
+    "image_url": "/static/images/downloaded/100px-Retro_Off-Road.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 3,
+      "traction_onroad": 3,
+      "traction_offroad": 6,
+      "turbo_mini": 1,
+      "speed_land": 3,
+      "speed_water": 4,
+      "speed_antigravity": 2,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 2,
+      "handling_air": 2,
+      "total": 32
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 6,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 6,
+        "min": 0,
+        "max": 7,
+        "pct": 86
+      },
+      "total": 16
+    }
+  },
+  {
+    "code": "gold_wheels",
+    "type": "tyre",
+    "name": "Gold Wheels",
+    "image": "Gold Tires MK8.png",
+    "image_url": "/static/images/downloaded/100px-Gold_Tires_MK8.png",
+    "points": {
+      "weight": 4,
+      "acceleration": 0,
+      "traction_onroad": 1,
+      "traction_offroad": 2,
+      "turbo_mini": 0,
+      "speed_land": 4,
+      "speed_water": 3,
+      "speed_antigravity": 1,
+      "speed_air": 2,
+      "handling_land": 2,
+      "handling_water": 2,
+      "handling_antigravity": 1,
+      "handling_air": 0,
+      "total": 22
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 0,
+        "min": 0,
+        "max": 6,
+        "pct": 0
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 4,
+        "min": 0,
+        "max": 4,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 2,
+        "min": 0,
+        "max": 7,
+        "pct": 29
+      },
+      "total": 12
+    }
+  },
+  {
+    "code": "gla_wheels",
+    "type": "tyre",
+    "name": "GLA Wheels",
+    "image": "GLATires-MK8.png",
+    "image_url": "/static/images/downloaded/100px-GLATires-MK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 4,
+      "traction_onroad": 2,
+      "traction_offroad": 5,
+      "turbo_mini": 3,
+      "speed_land": 2,
+      "speed_water": 3,
+      "speed_antigravity": 2,
+      "speed_air": 3,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 3,
+      "handling_air": 3,
+      "total": 38
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 4,
+        "min": 0,
+        "max": 6,
+        "pct": 67
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 4,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 5,
+        "min": 0,
+        "max": 7,
+        "pct": 71
+      },
+      "total": 16
+    }
+  },
+  {
+    "code": "triforce_tyres",
+    "type": "tyre",
+    "name": "Triforce Tyres",
+    "image": "MK8-TriforceTires.png",
+    "image_url": "/static/images/downloaded/100px-MK8-TriforceTires.png",
+    "points": {
+      "weight": 3,
+      "acceleration": 3,
+      "traction_onroad": 3,
+      "traction_offroad": 6,
+      "turbo_mini": 1,
+      "speed_land": 3,
+      "speed_water": 4,
+      "speed_antigravity": 2,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 2,
+      "handling_air": 2,
+      "total": 32
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 3,
+        "min": 0,
+        "max": 6,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 6,
+        "min": 0,
+        "max": 7,
+        "pct": 86
+      },
+      "total": 16
+    }
+  },
+  {
+    "code": "leaf_tyres",
+    "type": "tyre",
+    "name": "Leaf Tyres",
+    "image": "Leaf Tires MK8.png",
+    "image_url": "/static/images/downloaded/100px-Leaf_Tires_MK8.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 5,
+      "traction_onroad": 1,
+      "traction_offroad": 3,
+      "turbo_mini": 5,
+      "speed_land": 1,
+      "speed_water": 2,
+      "speed_antigravity": 2,
+      "speed_air": 2,
+      "handling_land": 3,
+      "handling_water": 3,
+      "handling_antigravity": 4,
+      "handling_air": 2,
+      "total": 33
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 4,
+        "pct": 25
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 5,
+        "min": 0,
+        "max": 6,
+        "pct": 83
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 4,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 3,
+        "min": 0,
+        "max": 4,
+        "pct": 75
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 3,
+        "min": 0,
+        "max": 7,
+        "pct": 43
+      },
+      "total": 12
+    }
+  }
+]

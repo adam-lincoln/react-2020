@@ -15,3 +15,11 @@ npx create-react-app burger-builder-web-app
 cd burger-builder-web-app
 yarn start
 yarn add node-sass
+
+
+# full post
+
+npx create-react-app blog-app
+cd blog-app
+yarn add node-sass
+yarn start

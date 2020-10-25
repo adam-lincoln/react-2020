@@ -1,0 +1,926 @@
+[
+  {
+    "code": "super_glider",
+    "type": "glider",
+    "name": "Super Glider",
+    "image": "SuperGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-SuperGliderMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 1,
+      "traction_onroad": 1,
+      "traction_offroad": 1,
+      "turbo_mini": 1,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 0,
+      "speed_air": 2,
+      "handling_land": 1,
+      "handling_water": 0,
+      "handling_antigravity": 1,
+      "handling_air": 1,
+      "total": 12
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "total": 5
+    }
+  },
+  {
+    "code": "cloud_glider",
+    "type": "glider",
+    "name": "Cloud Glider",
+    "image": "Cloud Glider.png",
+    "image_url": "/static/images/downloaded/100px-Cloud_Glider.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 2,
+      "traction_onroad": 1,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 0,
+      "handling_antigravity": 1,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 2,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "total": 4
+    }
+  },
+  {
+    "code": "wario_wing",
+    "type": "glider",
+    "name": "Wario Wing",
+    "image": "WarioWingMK8.png",
+    "image_url": "/static/images/downloaded/100px-WarioWingMK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 1,
+      "traction_onroad": 2,
+      "traction_offroad": 0,
+      "turbo_mini": 1,
+      "speed_land": 1,
+      "speed_water": 0,
+      "speed_antigravity": 1,
+      "speed_air": 2,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 1,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "total": 5
+    }
+  },
+  {
+    "code": "waddle_wing",
+    "type": "glider",
+    "name": "Waddle Wing",
+    "image": "WaddleWingMK8.png",
+    "image_url": "/static/images/downloaded/100px-WaddleWingMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 1,
+      "traction_onroad": 1,
+      "traction_offroad": 1,
+      "turbo_mini": 1,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 0,
+      "speed_air": 2,
+      "handling_land": 1,
+      "handling_water": 0,
+      "handling_antigravity": 1,
+      "handling_air": 1,
+      "total": 12
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "total": 5
+    }
+  },
+  {
+    "code": "peach_parasol",
+    "type": "glider",
+    "name": "Peach Parasol",
+    "image": "PeachParasolGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-PeachParasolGliderMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 2,
+      "traction_onroad": 2,
+      "traction_offroad": 0,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "total": 4
+    }
+  },
+  {
+    "code": "parachute",
+    "type": "glider",
+    "name": "Parachute",
+    "image": "ParachuteGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-ParachuteGliderMK8.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 2,
+      "traction_onroad": 1,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 0,
+      "handling_antigravity": 1,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 2,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "total": 4
+    }
+  },
+  {
+    "code": "parafoil",
+    "type": "glider",
+    "name": "Parafoil",
+    "image": "ParafoilGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-ParafoilGliderMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 2,
+      "traction_onroad": 2,
+      "traction_offroad": 0,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "total": 4
+    }
+  },
+  {
+    "code": "flower_glider",
+    "type": "glider",
+    "name": "Flower Glider",
+    "image": "FlowerGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-FlowerGliderMK8.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 2,
+      "traction_onroad": 1,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 0,
+      "handling_antigravity": 1,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 2,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "total": 4
+    }
+  },
+  {
+    "code": "bowser_kite",
+    "type": "glider",
+    "name": "Bowser Kite",
+    "image": "BowserKiteMK8.png",
+    "image_url": "/static/images/downloaded/100px-BowserKiteMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 2,
+      "traction_onroad": 2,
+      "traction_offroad": 0,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "total": 4
+    }
+  },
+  {
+    "code": "plane_glider",
+    "type": "glider",
+    "name": "Plane Glider",
+    "image": "PlaneGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-PlaneGliderMK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 1,
+      "traction_onroad": 2,
+      "traction_offroad": 0,
+      "turbo_mini": 1,
+      "speed_land": 1,
+      "speed_water": 0,
+      "speed_antigravity": 1,
+      "speed_air": 2,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 1,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "total": 5
+    }
+  },
+  {
+    "code": "mktv_parafoil",
+    "type": "glider",
+    "name": "MKTV Parafoil",
+    "image": "MKTVParafoilGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-MKTVParafoilGliderMK8.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 2,
+      "traction_onroad": 2,
+      "traction_offroad": 0,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 0,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "total": 4
+    }
+  },
+  {
+    "code": "gold_glider",
+    "type": "glider",
+    "name": "Gold Glider",
+    "image": "GoldGliderMK8.png",
+    "image_url": "/static/images/downloaded/100px-GoldGliderMK8.png",
+    "points": {
+      "weight": 2,
+      "acceleration": 1,
+      "traction_onroad": 2,
+      "traction_offroad": 0,
+      "turbo_mini": 1,
+      "speed_land": 1,
+      "speed_water": 0,
+      "speed_antigravity": 1,
+      "speed_air": 2,
+      "handling_land": 1,
+      "handling_water": 1,
+      "handling_antigravity": 0,
+      "handling_air": 1,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "total": 5
+    }
+  },
+  {
+    "code": "hylian_kite",
+    "type": "glider",
+    "name": "Hylian Kite",
+    "image": "MK8-HylianKite.png",
+    "image_url": "/static/images/downloaded/100px-MK8-HylianKite.png",
+    "points": {
+      "weight": 1,
+      "acceleration": 1,
+      "traction_onroad": 1,
+      "traction_offroad": 1,
+      "turbo_mini": 1,
+      "speed_land": 1,
+      "speed_water": 1,
+      "speed_antigravity": 0,
+      "speed_air": 2,
+      "handling_land": 1,
+      "handling_water": 0,
+      "handling_antigravity": 1,
+      "handling_air": 1,
+      "total": 12
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 1,
+        "min": 0,
+        "max": 2,
+        "pct": 50
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "total": 5
+    }
+  },
+  {
+    "code": "paper_glider",
+    "type": "glider",
+    "name": "Paper Glider",
+    "image": "PaperGliderIcon-MK8.png",
+    "image_url": "/static/images/downloaded/100px-PaperGliderIcon-MK8.png",
+    "points": {
+      "weight": 0,
+      "acceleration": 2,
+      "traction_onroad": 1,
+      "traction_offroad": 1,
+      "turbo_mini": 2,
+      "speed_land": 0,
+      "speed_water": 1,
+      "speed_antigravity": 1,
+      "speed_air": 1,
+      "handling_land": 1,
+      "handling_water": 0,
+      "handling_antigravity": 1,
+      "handling_air": 2,
+      "total": 13
+    },
+    "stats": {
+      "speed": {
+        "code": "speed",
+        "name": "Speed",
+        "val": 0,
+        "min": 0,
+        "max": 1,
+        "pct": 0
+      },
+      "acceleration": {
+        "code": "acceleration",
+        "name": "Acceleration",
+        "val": 2,
+        "min": 0,
+        "max": 2,
+        "pct": 100
+      },
+      "weight": {
+        "code": "weight",
+        "name": "Weight",
+        "val": 0,
+        "min": 0,
+        "max": 2,
+        "pct": 0
+      },
+      "handling": {
+        "code": "handling",
+        "name": "Handling",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "grip": {
+        "code": "grip",
+        "name": "Grip",
+        "val": 1,
+        "min": 0,
+        "max": 1,
+        "pct": 100
+      },
+      "total": 4
+    }
+  }
+]

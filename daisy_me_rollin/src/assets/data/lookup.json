@@ -1,0 +1,35 @@
+[
+	{
+
+	}
+]
+
+
+"pt_weight"
+"pt_acceleration"
+"pt_traction_onroad"
+"pt_traction_offroad"
+"pt_turbo_mini"
+"pt_speed_land"
+"pt_speed_water"
+"pt_speed_antigravity"
+"pt_speed_air"
+"pt_handling_land"
+"pt_handling_water"
+"pt_handling_antigravity"
+"pt_handling_air"
+
+
+WG: Weight
+AC: Acceleration
+ON: On-Road traction
+OF: (Off-Road) Traction
+MT: Mini-Turbo
+SL: Ground Speed
+SW: Water Speed
+SA: Anti-Gravity Speed
+SG: Air Speed
+TL: Ground Handling
+TW: Water Handling
+TA: Anti-Gravity Handling
+TG: Air Handling

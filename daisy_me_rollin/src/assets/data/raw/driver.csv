@@ -1,4 +1,4 @@
-"code","type","name","image_name","weight","acceleration","traction_onroad","traction_offroad","turbo_mini","speed_land","speed_water","speed_antigravity","speed_air","handling_land","handling_water","handling_antigravity","handling_air"
+"code","type","name","image","pt_weight","pt_acceleration","pt_traction_onroad","pt_traction_offroad","pt_turbo_mini","pt_speed_land","pt_speed_water","pt_speed_antigravity","pt_speed_air","pt_handling_land","pt_handling_water","pt_handling_antigravity","pt_handling_air"
 "","driver","Mario","MK8 Mario Icon.png","6","2","4","2","2","6","6","6","6","4","4","4","4"
 "","driver","Luigi","MK8 Luigi Icon.png","6","2","5","1","2","6","6","6","6","5","5","5","5"
 "","driver","Peach","MK8 Peach Icon.png","4","3","3","3","3","5","5","5","5","5","5","5","5"

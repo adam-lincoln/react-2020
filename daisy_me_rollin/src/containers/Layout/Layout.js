@@ -50,8 +50,6 @@ const Layout = (props) => {
 
   const [tabIndex, setTabIndex] = useState(0);
 
-  const summaryList = props.buildList.map(build => build.summary);
-
   return (
     <div>
       <AppBar position="fixed">
@@ -69,11 +67,11 @@ const Layout = (props) => {
           variant="scrollable"
           scrollButtons="on"
           >
-          <Tab label="BUILDS" />
+          {/* <Tab label="BUILDS" /> */}
           <Tab label="DRIVERS" />
-          <Tab label="VEHICLES" />
+          {/* <Tab label="VEHICLES" />
           <Tab label="TYRES" />
-          <Tab label="GLIDERS" />
+          <Tab label="GLIDERS" /> */}
         </Tabs>
       </AppBar>
 
@@ -85,13 +83,13 @@ const Layout = (props) => {
         index={tabIndex}
         onChangeIndex={(val) => setTabIndex(val)}
         >
-        <Box p={1}>
-          <List title="Builds" resultsText="build(s)" items={summaryList} />
-        </Box>
+        {/* <Box p={1}>
+          <List title="Builds" resultsText="build(s)" items={props.buildList} />
+        </Box> */}
         <Box p={1}>
           <List title="Drivers" resultsText="driver(s)" items={props.driverList} />
         </Box>
-        <Box p={1}>
+        {/* <Box p={1}>
           <List title="Vehicles" resultsText="vehicle(s)" items={props.vehicleList} />
         </Box>
         <Box p={1}>
@@ -99,7 +97,7 @@ const Layout = (props) => {
         </Box>
         <Box p={1}>
           <List title="Gliders" resultsText="glider(s)" items={props.gliderList} />
-        </Box>
+        </Box> */}
       </BindKeyboardSwipeableViews>
 
       <Zoom
